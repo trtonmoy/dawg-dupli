@@ -40256,23 +40256,23 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
   g6.use(hL);
   g6.use(wt1);
   g6.mount("#app");
+
+  //toggled audio
+
+  const toggledBtn = document.getElementsByClassName("parallxButton");
+  toggledBtn.onclick = function (event) {
+    var closingAudio = document.getElementById("closingAudio");
+
+    closingAudio.play();
+    // if (closeButton) {
+    //   modal.style.display = "none";
+    //   closingAudio.play();
+    // } else {
+    //   if (event.target === modal) {
+    //     modal.style.display = "none";
+    //   }
+    //   closingAudio.play();
+    // }
+  };
 });
 export default kt1();
-
-//toggled audio
-
-const toggledBtn = document.getElementsByClassName("parallxButton");
-toggledBtn.onclick = function (event) {
-  var closingAudio = document.getElementById("closingAudio");
-
-  closingAudio.play();
-  // if (closeButton) {
-  //   modal.style.display = "none";
-  //   closingAudio.play();
-  // } else {
-  //   if (event.target === modal) {
-  //     modal.style.display = "none";
-  //   }
-  //   closingAudio.play();
-  // }
-};
