@@ -10056,6 +10056,8 @@ Arguments: ` +
     bC = H4(() => C("div", { class: "parallxLayerRStar" }, null, -1)),
     NC = H4(() => C("div", { class: "parallxLayerShooter" }, null, -1));
   function SC(i, t, a, o, c, n) {
+    const musicAdd = document.getElementById("audioSong");
+
     return (
       k1(),
       W1("div", HC, [
@@ -10069,6 +10071,7 @@ Arguments: ` +
                 (t[0] = (...e) => n.clickShowHome && n.clickShowHome(...e)),
               class: "siteButton absolute top-[50%] left-3",
             }),
+
             CC,
           ]),
         ]),
@@ -10089,7 +10092,10 @@ Arguments: ` +
               C("div", {
                 onClick:
                   t[1] ||
-                  (t[1] = (...e) => n.clickShowHome && n.clickShowHome(...e)),
+                  (t[1] = (...e) => {
+                    n.clickShowHome && n.clickShowHome(...e);
+                    musicAdd.play();
+                  }),
                 class: "parallxButton",
               }),
             ],
