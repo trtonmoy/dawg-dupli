@@ -1603,7 +1603,6 @@ body[data-v-50dd0ac3] {
   margin-left: 100px;
   position: absolute;
   transform: translateZ(50px);
-  display: none;
 }
 .siteButton[data-v-50dd0ac3] {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
