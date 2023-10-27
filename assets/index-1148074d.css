@@ -1611,7 +1611,7 @@ body[data-v-50dd0ac3] {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.2s;
-  background-image: url(../button.png);
+  background-image: url(../);
   cursor: pointer;
   width: 175px;
   height: 100%;
@@ -2003,6 +2003,7 @@ ul.list li {
   position: relative;
   height: 100%;
   z-index: 3;
+  display: none;
 }
 #player-track {
   position: absolute;
