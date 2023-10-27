@@ -9077,7 +9077,7 @@ Arguments: ` +
     bM = C2(
       '<div class="main-photo__title font-bronzier text-xl mb-1 lg:mb-0"> DAWG caught fucking your bitch </div><div class="main-photo__desc text-sm text-center"> DAWG was seen making off with your favorite toy, causing quite a stir in the neighborhood. </div><div class="flex items-center mt-2 lg:mt-1 gap-x-6 px-4 py-2 border-2 border-black rounded-xl bg-white"><a class="cursor-pointer" href=""><img class="w-10 h-10 z-10" src="' +
         co +
-        '" alt=""></a><a class="cursor-pointer" href="https://t.me/dawg_eth"><img class="w-10 h-10 z-10" src="' +
+        '" alt=""></a><a class="cursor-pointer" href="tglink"><img class="w-10 h-10 z-10" src="' +
         no +
         '" alt=""></a><a href="" class="relative"><img class="w-10 h-10 z-10" src="' +
         eo +
