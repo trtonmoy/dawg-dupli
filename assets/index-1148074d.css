@@ -1958,6 +1958,7 @@ body[data-v-50dd0ac3] {
   overflow: hidden;
   cursor: pointer;
   color: #fff;
+  display: none;
 }
 ul.list {
   position: relative;
@@ -2002,7 +2003,7 @@ ul.list li {
   position: relative;
   height: 100%;
   z-index: 3;
-  display: none;
+  
 }
 #player-track {
   position: absolute;
