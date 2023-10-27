@@ -1,4 +1,13 @@
-var Hg = (i, t) => () => (t || i((t = { exports: {} }).exports, t), t.exports);
+var Hg = (i, t) => () => (
+  t ||
+    i(
+      (t = {
+        exports: {},
+      }).exports,
+      t
+    ),
+  t.exports
+);
 var kt1 = Hg((_t1, q6) => {
   (function () {
     const t = document.createElement("link").relList;
@@ -10,7 +19,10 @@ var kt1 = Hg((_t1, q6) => {
         if (n.type === "childList")
           for (const e of n.addedNodes)
             e.tagName === "LINK" && e.rel === "modulepreload" && o(e);
-    }).observe(document, { childList: !0, subtree: !0 });
+    }).observe(document, {
+      childList: !0,
+      subtree: !0,
+    });
     function a(c) {
       const n = {};
       return (
@@ -77,7 +89,7 @@ var kt1 = Hg((_t1, q6) => {
     Lg = /\B([A-Z])/g,
     g4 = r0((i) => i.replace(Lg, "-$1").toLowerCase()),
     s0 = r0((i) => i.charAt(0).toUpperCase() + i.slice(1)),
-    a8 = r0((i) => (i ? `on${s0(i)}` : "")),
+    a8 = r0((i) => (i ? `on ${s0(i)}` : "")),
     D4 = (i, t) => !Object.is(i, t),
     o8 = (i, t) => {
       for (let a = 0; a < i.length; a++) i[a](t);
@@ -178,7 +190,9 @@ var kt1 = Hg((_t1, q6) => {
             ),
           }
         : Yi(t)
-        ? { [`Set(${t.size})`]: [...t.values()] }
+        ? {
+            [`Set(${t.size})`]: [...t.values()],
+          }
         : S1(t) && !K(t) && !Ki(t)
         ? String(t)
         : t;
@@ -482,7 +496,13 @@ var kt1 = Hg((_t1, q6) => {
   function jg(i) {
     return J1(i, "iterate", K(i) ? "length" : P3), Reflect.ownKeys(i);
   }
-  const rt = { get: Bg, set: Wg, deleteProperty: Gg, has: Yg, ownKeys: jg },
+  const rt = {
+      get: Bg,
+      set: Wg,
+      deleteProperty: Gg,
+      has: Yg,
+      ownKeys: jg,
+    },
     Zg = {
       get: Eg,
       set(i, t) {
@@ -492,7 +512,10 @@ var kt1 = Hg((_t1, q6) => {
         return !0;
       },
     },
-    Kg = T1({}, rt, { get: Og, set: Ug }),
+    Kg = T1({}, rt, {
+      get: Og,
+      set: Ug,
+    }),
     m5 = (i) => i,
     l0 = (i) => Reflect.getPrototypeOf(i);
   function u6(i, t, a = !1, o = !1) {
@@ -577,8 +600,14 @@ var kt1 = Hg((_t1, q6) => {
           next() {
             const { value: l, done: g } = s.next();
             return g
-              ? { value: l, done: g }
-              : { value: f ? [d(l[0]), d(l[1])] : d(l), done: g };
+              ? {
+                  value: l,
+                  done: g,
+                }
+              : {
+                  value: f ? [d(l[0]), d(l[1])] : d(l),
+                  done: g,
+                };
           },
           [Symbol.iterator]() {
             return this;
@@ -675,9 +704,15 @@ var kt1 = Hg((_t1, q6) => {
         ? o
         : Reflect.get(d1(a, c) && c in o ? a : o, c, n);
   }
-  const am = { get: u5(!1, !1) },
-    om = { get: u5(!1, !0) },
-    cm = { get: u5(!0, !1) },
+  const am = {
+      get: u5(!1, !1),
+    },
+    om = {
+      get: u5(!1, !0),
+    },
+    cm = {
+      get: u5(!0, !1),
+    },
     st = new WeakMap(),
     dt = new WeakMap(),
     lt = new WeakMap(),
@@ -1090,7 +1125,13 @@ var kt1 = Hg((_t1, q6) => {
       } else {
         const S = t;
         (w = y2(
-          S.length > 1 ? S(n, { attrs: r, slots: f, emit: s }) : S(n, null)
+          S.length > 1
+            ? S(n, {
+                attrs: r,
+                slots: f,
+                emit: s,
+              })
+            : S(n, null)
         )),
           (z = t.props ? r : Vm(r));
       }
@@ -1497,13 +1538,31 @@ var kt1 = Hg((_t1, q6) => {
         a == null ? e.key : String(a) + String(e.key != null ? e.key : n);
       e.type === S2
         ? (e.patchFlag & 128 && c++, (o = o.concat(kt(e.children, t, f))))
-        : (t || e.type !== I2) && o.push(f != null ? I3(e, { key: f }) : e);
+        : (t || e.type !== I2) &&
+          o.push(
+            f != null
+              ? I3(e, {
+                  key: f,
+                })
+              : e
+          );
     }
     if (c > 1) for (let n = 0; n < o.length; n++) o[n].patchFlag = -2;
     return o;
   }
   function V5(i, t) {
-    return a1(i) ? (() => T1({ name: i.name }, t, { setup: i }))() : i;
+    return a1(i)
+      ? (() =>
+          T1(
+            {
+              name: i.name,
+            },
+            t,
+            {
+              setup: i,
+            }
+          ))()
+      : i;
   }
   const _6 = (i) => !!i.type.__asyncLoader,
     v0 = (i) => i.type.__isKeepAlive;
@@ -1739,7 +1798,10 @@ var kt1 = Hg((_t1, q6) => {
         const g1 = n[I1],
           B2 = a1(g1) ? g1.bind(a, a) : a1(g1.get) ? g1.get.bind(a, a) : H2,
           o3 = !a1(g1) && a1(g1.set) ? g1.set.bind(a) : H2,
-          x2 = E1({ get: B2, set: o3 });
+          x2 = E1({
+            get: B2,
+            set: o3,
+          });
         Object.defineProperty(o, I1, {
           enumerable: !0,
           configurable: !0,
@@ -2159,7 +2221,12 @@ var kt1 = Hg((_t1, q6) => {
         const l = P2(d);
         if (w9(l)) {
           const g = n[d],
-            u = (e[l] = K(g) || a1(g) ? { type: g } : T1({}, g));
+            u = (e[l] =
+              K(g) || a1(g)
+                ? {
+                    type: g,
+                  }
+                : T1({}, g));
           if (u) {
             const I = _9(Boolean, u.type),
               L = _9(String, u.type);
@@ -2227,7 +2294,12 @@ var kt1 = Hg((_t1, q6) => {
             : (T1(c, t), !a && f === 1 && delete c._)
           : ((n = !t.$stable), qt(t, c)),
           (e = t);
-      } else t && ($t(i, t), (e = { default: 1 }));
+      } else
+        t &&
+          ($t(i, t),
+          (e = {
+            default: 1,
+          }));
       if (n) for (const f in c) !Et(f) && !(f in e) && delete c[f];
     };
   function _8(i, t, a, o, c = !1) {
@@ -2840,7 +2912,12 @@ var kt1 = Hg((_t1, q6) => {
       };
     let G, m1;
     return (
-      t && ([G, m1] = t(_)), { render: E, hydrate: G, createApp: Xm(E, G) }
+      t && ([G, m1] = t(_)),
+      {
+        render: E,
+        hydrate: G,
+        createApp: Xm(E, G),
+      }
     );
   }
   function L3({ effect: i, update: t }, a) {
@@ -2924,7 +3001,12 @@ var kt1 = Hg((_t1, q6) => {
       typeof i == "number" && (i = "" + i),
       i != null
         ? R1(i) || A1(i) || a1(i)
-          ? { i: o2, r: i, k: t, f: !!a }
+          ? {
+              i: o2,
+              r: i,
+              k: t,
+              f: !!a,
+            }
           : i
         : null
     );
@@ -3088,7 +3170,11 @@ var kt1 = Hg((_t1, q6) => {
       }
     else
       a1(t)
-        ? ((t = { default: t, _ctx: o2 }), (a = 32))
+        ? ((t = {
+            default: t,
+            _ctx: o2,
+          }),
+          (a = 32))
         : ((t = String(t)), o & 64 ? ((a = 16), (t = [Yt(t)])) : (a = 8));
     (i.children = t), (i.shapeFlag |= a);
   }
@@ -3180,7 +3266,9 @@ var kt1 = Hg((_t1, q6) => {
         sp: null,
       };
     return (
-      (n.ctx = { _: n }),
+      (n.ctx = {
+        _: n,
+      }),
       (n.root = t ? t.root : n),
       (n.emit = Mm.bind(null, n)),
       i.ce && i.ce(n),
@@ -3254,7 +3342,16 @@ var kt1 = Hg((_t1, q6) => {
           const { isCustomElement: n, compilerOptions: e } =
               i.appContext.config,
             { delimiters: f, compilerOptions: r } = o,
-            s = T1(T1({ isCustomElement: n, delimiters: f }, e), r);
+            s = T1(
+              T1(
+                {
+                  isCustomElement: n,
+                  delimiters: f,
+                },
+                e
+              ),
+              r
+            );
           o.render = D9(c, s);
         }
       }
@@ -3337,7 +3434,14 @@ var kt1 = Hg((_t1, q6) => {
       createElement: (i, t, a, o) => {
         const c = t
           ? w3.createElementNS(xu, i)
-          : w3.createElement(i, a ? { is: a } : void 0);
+          : w3.createElement(
+              i,
+              a
+                ? {
+                    is: a,
+                  }
+                : void 0
+            );
         return (
           i === "select" &&
             o &&
@@ -3567,7 +3671,10 @@ var kt1 = Hg((_t1, q6) => {
   const Kt = {
     name: String,
     type: String,
-    css: { type: Boolean, default: !0 },
+    css: {
+      type: Boolean,
+      default: !0,
+    },
     duration: [String, Number, Object],
     enterFromClass: String,
     enterActiveClass: String,
@@ -3728,7 +3835,12 @@ var kt1 = Hg((_t1, q6) => {
         (g = d ? (d === n3 ? n.length : r.length) : 0));
     const u =
       d === n3 && /\b(transform|all)(,|$)/.test(o(`${n3}Property`).toString());
-    return { type: d, timeout: l, propCount: g, hasTransform: u };
+    return {
+      type: d,
+      timeout: l,
+      propCount: g,
+      hasTransform: u,
+    };
   }
   function Y9(i, t) {
     for (; i.length < t.length; ) i = i.concat(i);
@@ -3740,7 +3852,12 @@ var kt1 = Hg((_t1, q6) => {
   function Gu() {
     return document.body.offsetHeight;
   }
-  const Yu = T1({ patchProp: Ou }, bu);
+  const Yu = T1(
+    {
+      patchProp: Ou,
+    },
+    bu
+  );
   let Z9;
   function ju() {
     return Z9 || (Z9 = cu(Yu));
@@ -3773,7 +3890,8 @@ var kt1 = Hg((_t1, q6) => {
    * pinia v2.1.6
    * (c) 2023 Eduardo San Martin Morote
    * @license MIT
-   */ let Xt;
+   */
+  let Xt;
   const M0 = (i) => (Xt = i),
     Qt = Symbol();
   function F8(i) {
@@ -3880,8 +3998,15 @@ var kt1 = Hg((_t1, q6) => {
   }
   function ia(i, t, a = {}, o, c, n) {
     let e;
-    const f = s3({ actions: {} }, a),
-      r = { deep: !0 };
+    const f = s3(
+        {
+          actions: {},
+        },
+        a
+      ),
+      r = {
+        deep: !0,
+      };
     let s,
       d,
       l = [],
@@ -3895,9 +4020,18 @@ var kt1 = Hg((_t1, q6) => {
       (s = d = !1),
         typeof P == "function"
           ? (P(o.state.value[i]),
-            (D = { type: w4.patchFunction, storeId: i, events: u }))
+            (D = {
+              type: w4.patchFunction,
+              storeId: i,
+              events: u,
+            }))
           : (D8(o.state.value[i], P),
-            (D = { type: w4.patchObject, payload: P, storeId: i, events: u }));
+            (D = {
+              type: w4.patchObject,
+              payload: P,
+              storeId: i,
+              events: u,
+            }));
       const X = (L = Symbol());
       p5().then(() => {
         L === X && (s = !0);
@@ -3929,7 +4063,13 @@ var kt1 = Hg((_t1, q6) => {
         function _1(f1) {
           R.push(f1);
         }
-        U3(g, { args: X, name: P, store: q, after: e1, onError: _1 });
+        U3(g, {
+          args: X,
+          name: P,
+          store: q,
+          after: e1,
+          onError: _1,
+        });
         let O1;
         try {
           O1 = D.apply(this && this.$id === i ? this : q, X);
@@ -3956,7 +4096,14 @@ var kt1 = Hg((_t1, q6) => {
                 () => o.state.value[i],
                 (R) => {
                   (D.flush === "sync" ? d : s) &&
-                    P({ storeId: i, type: w4.direct, events: u }, R);
+                    P(
+                      {
+                        storeId: i,
+                        type: w4.direct,
+                        events: u,
+                      },
+                      R
+                    );
                 },
                 s3({}, r, D)
               )
@@ -3994,7 +4141,14 @@ var kt1 = Hg((_t1, q6) => {
       o._p.forEach((P) => {
         s3(
           q,
-          e.run(() => P({ store: q, app: o._a, pinia: o, options: f }))
+          e.run(() =>
+            P({
+              store: q,
+              app: o._a,
+              pinia: o,
+              options: f,
+            })
+          )
         );
       }),
       I && n && a.hydrate && a.hydrate(q.$state, I),
@@ -4035,7 +4189,8 @@ var kt1 = Hg((_t1, q6) => {
    * vue-router v4.2.4
    * (c) 2023 Eduardo San Martin Morote
    * @license MIT
-   */ const Y3 = typeof window < "u";
+   */
+  const Y3 = typeof window < "u";
   function ev(i) {
     return i.__esModule || i[Symbol.toStringTag] === "Module";
   }
@@ -4067,7 +4222,12 @@ var kt1 = Hg((_t1, q6) => {
         (c = i(n))),
       f > -1 && ((o = o || t.slice(0, f)), (e = t.slice(f, t.length))),
       (o = hv(o ?? t, a)),
-      { fullPath: o + (n && "?") + n + e, path: o, query: c, hash: e }
+      {
+        fullPath: o + (n && "?") + n + e,
+        path: o,
+        query: c,
+        hash: e,
+      }
     );
   }
   function sv(i, t) {
@@ -4157,7 +4317,10 @@ var kt1 = Hg((_t1, q6) => {
       top: o.top - a.top - (t.top || 0),
     };
   }
-  const V0 = () => ({ left: window.pageXOffset, top: window.pageYOffset });
+  const V0 = () => ({
+    left: window.pageXOffset,
+    top: window.pageYOffset,
+  });
   function zv(i) {
     let t;
     if ("el" in i) {
@@ -4238,7 +4401,13 @@ var kt1 = Hg((_t1, q6) => {
     }
     function d() {
       const { history: g } = window;
-      g.state && g.replaceState(v1({}, g.state, { scroll: V0() }), "");
+      g.state &&
+        g.replaceState(
+          v1({}, g.state, {
+            scroll: V0(),
+          }),
+          ""
+        );
     }
     function l() {
       for (const g of n) g();
@@ -4248,8 +4417,14 @@ var kt1 = Hg((_t1, q6) => {
     }
     return (
       window.addEventListener("popstate", f),
-      window.addEventListener("beforeunload", d, { passive: !0 }),
-      { pauseListeners: r, listen: s, destroy: l }
+      window.addEventListener("beforeunload", d, {
+        passive: !0,
+      }),
+      {
+        pauseListeners: r,
+        listen: s,
+        destroy: l,
+      }
     );
   }
   function ii(i, t, a, o = !1, c = !1) {
@@ -4264,8 +4439,12 @@ var kt1 = Hg((_t1, q6) => {
   }
   function Vv(i) {
     const { history: t, location: a } = window,
-      o = { value: aa(i, a) },
-      c = { value: t.state };
+      o = {
+        value: aa(i, a),
+      },
+      c = {
+        value: t.state,
+      };
     c.value ||
       n(
         o.value,
@@ -4298,12 +4477,27 @@ var kt1 = Hg((_t1, q6) => {
       n(r, d, !0), (o.value = r);
     }
     function f(r, s) {
-      const d = v1({}, c.value, t.state, { forward: r, scroll: V0() });
+      const d = v1({}, c.value, t.state, {
+        forward: r,
+        scroll: V0(),
+      });
       n(d.current, d, !0);
-      const l = v1({}, ii(o.value, r, null), { position: d.position + 1 }, s);
+      const l = v1(
+        {},
+        ii(o.value, r, null),
+        {
+          position: d.position + 1,
+        },
+        s
+      );
       n(r, l, !1), (o.value = r);
     }
-    return { location: o, state: c, push: f, replace: e };
+    return {
+      location: o,
+      state: c,
+      push: f,
+      replace: e,
+    };
   }
   function Cv(i) {
     i = gv(i);
@@ -4313,7 +4507,12 @@ var kt1 = Hg((_t1, q6) => {
       e || a.pauseListeners(), history.go(n);
     }
     const c = v1(
-      { location: "", base: i, go: o, createHref: uv.bind(null, i) },
+      {
+        location: "",
+        base: i,
+        go: o,
+        createHref: uv.bind(null, i),
+      },
       t,
       a
     );
@@ -4354,13 +4553,25 @@ var kt1 = Hg((_t1, q6) => {
       (i[(i.duplicated = 16)] = "duplicated");
   })(ti || (ti = {}));
   function l4(i, t) {
-    return v1(new Error(), { type: i, [ca]: !0 }, t);
+    return v1(
+      new Error(),
+      {
+        type: i,
+        [ca]: !0,
+      },
+      t
+    );
   }
   function O2(i, t) {
     return i instanceof Error && ca in i && (t == null || !!(i.type & t));
   }
   const ai = "[^/]+?",
-    xv = { sensitive: !1, strict: !1, start: !0, end: !0 },
+    xv = {
+      sensitive: !1,
+      strict: !1,
+      start: !0,
+      end: !0,
+    },
     bv = /[.+*?^${}()[\]/\\]/g;
   function Nv(i, t) {
     const a = v1({}, xv, t),
@@ -4377,7 +4588,11 @@ var kt1 = Hg((_t1, q6) => {
           l || (c += "/"), (c += g.value.replace(bv, "\\$&")), (u += 40);
         else if (g.type === 1) {
           const { value: I, repeatable: L, optional: w, regexp: z } = g;
-          n.push({ name: I, repeatable: L, optional: w });
+          n.push({
+            name: I,
+            repeatable: L,
+            optional: w,
+          });
           const p = z || ai;
           if (p !== ai) {
             u += 10;
@@ -4444,7 +4659,13 @@ var kt1 = Hg((_t1, q6) => {
       }
       return d || "/";
     }
-    return { re: e, score: o, keys: n, parse: f, stringify: r };
+    return {
+      re: e,
+      score: o,
+      keys: n,
+      parse: f,
+      stringify: r,
+    };
   }
   function Sv(i, t) {
     let a = 0;
@@ -4482,7 +4703,10 @@ var kt1 = Hg((_t1, q6) => {
     const t = i[i.length - 1];
     return i.length > 0 && t[t.length - 1] < 0;
   }
-  const wv = { type: 0, value: "" },
+  const wv = {
+      type: 0,
+      value: "",
+    },
     kv = /[a-zA-Z0-9_]/;
   function Av(i) {
     if (!i) return [[]];
@@ -4505,7 +4729,10 @@ var kt1 = Hg((_t1, q6) => {
     function l() {
       s &&
         (a === 0
-          ? n.push({ type: 0, value: s })
+          ? n.push({
+              type: 0,
+              value: s,
+            })
           : a === 1 || a === 2 || a === 3
           ? (n.length > 1 &&
               (r === "*" || r === "+") &&
@@ -4565,13 +4792,25 @@ var kt1 = Hg((_t1, q6) => {
   }
   function _v(i, t, a) {
     const o = Nv(Av(i.path), a),
-      c = v1(o, { record: i, parent: t, children: [], alias: [] });
+      c = v1(o, {
+        record: i,
+        parent: t,
+        children: [],
+        alias: [],
+      });
     return t && !c.record.aliasOf == !t.record.aliasOf && t.children.push(c), c;
   }
   function Pv(i, t) {
     const a = [],
       o = new Map();
-    t = ei({ strict: !1, end: !0, sensitive: !1 }, t);
+    t = ei(
+      {
+        strict: !1,
+        end: !0,
+        sensitive: !1,
+      },
+      t
+    );
     function c(d) {
       return o.get(d);
     }
@@ -4662,7 +4901,10 @@ var kt1 = Hg((_t1, q6) => {
         I,
         L;
       if ("name" in d && d.name) {
-        if (((g = o.get(d.name)), !g)) throw l4(1, { location: d });
+        if (((g = o.get(d.name)), !g))
+          throw l4(1, {
+            location: d,
+          });
         (L = g.record.name),
           (u = v1(
             ci(
@@ -4684,7 +4926,10 @@ var kt1 = Hg((_t1, q6) => {
         if (
           ((g = l.name ? o.get(l.name) : a.find((p) => p.re.test(l.path))), !g)
         )
-          throw l4(1, { location: d, currentLocation: l });
+          throw l4(1, {
+            location: d,
+            currentLocation: l,
+          });
         (L = g.record.name),
           (u = v1({}, l.params, d.params)),
           (I = g.stringify(u));
@@ -4692,7 +4937,13 @@ var kt1 = Hg((_t1, q6) => {
       const w = [];
       let z = g;
       for (; z; ) w.unshift(z.record), (z = z.parent);
-      return { name: L, path: I, params: u, matched: w, meta: Dv(w) };
+      return {
+        name: L,
+        path: I,
+        params: u,
+        matched: w,
+        meta: Dv(w),
+      };
     }
     return (
       i.forEach((d) => n(d)),
@@ -4727,7 +4978,9 @@ var kt1 = Hg((_t1, q6) => {
       components:
         "components" in i
           ? i.components || null
-          : i.component && { default: i.component },
+          : i.component && {
+              default: i.component,
+            },
     };
   }
   function Fv(i) {
@@ -4867,7 +5120,11 @@ var kt1 = Hg((_t1, q6) => {
     function a() {
       i = [];
     }
-    return { add: t, list: () => i.slice(), reset: a };
+    return {
+      add: t,
+      list: () => i.slice(),
+      reset: a,
+    };
   }
   function l3(i, t, a, o, c) {
     const n = o && (o.enterCallbacks[c] = o.enterCallbacks[c] || []);
@@ -4875,11 +5132,21 @@ var kt1 = Hg((_t1, q6) => {
       new Promise((e, f) => {
         const r = (l) => {
             l === !1
-              ? f(l4(4, { from: a, to: t }))
+              ? f(
+                  l4(4, {
+                    from: a,
+                    to: t,
+                  })
+                )
               : l instanceof Error
               ? f(l)
               : Lv(l)
-              ? f(l4(2, { from: t, to: l }))
+              ? f(
+                  l4(2, {
+                    from: t,
+                    to: l,
+                  })
+                )
               : (n &&
                   o.enterCallbacks[c] === n &&
                   typeof l == "function" &&
@@ -4967,14 +5234,22 @@ var kt1 = Hg((_t1, q6) => {
   }
   const tz = V5({
       name: "RouterLink",
-      compatConfig: { MODE: 3 },
+      compatConfig: {
+        MODE: 3,
+      },
       props: {
-        to: { type: [String, Object], required: !0 },
+        to: {
+          type: [String, Object],
+          required: !0,
+        },
         replace: Boolean,
         activeClass: String,
         exactActiveClass: String,
         custom: Boolean,
-        ariaCurrentValue: { type: String, default: "page" },
+        ariaCurrentValue: {
+          type: String,
+          default: "page",
+        },
       },
       useLink: si,
       setup(i, { slots: t }) {
@@ -5042,8 +5317,16 @@ var kt1 = Hg((_t1, q6) => {
     nz = V5({
       name: "RouterView",
       inheritAttrs: !1,
-      props: { name: { type: String, default: "default" }, route: Object },
-      compatConfig: { MODE: 3 },
+      props: {
+        name: {
+          type: String,
+          default: "default",
+        },
+        route: Object,
+      },
+      compatConfig: {
+        MODE: 3,
+      },
       setup(i, { attrs: t, slots: a }) {
         const o = _2(O8),
           c = E1(() => i.route || o.value),
@@ -5080,14 +5363,20 @@ var kt1 = Hg((_t1, q6) => {
                   (!u || !d4(d, u) || !g) &&
                   (d.enterCallbacks[l] || []).forEach((L) => L(s));
             },
-            { flush: "post" }
+            {
+              flush: "post",
+            }
           ),
           () => {
             const s = c.value,
               d = i.name,
               l = f.value,
               g = l && l.components[d];
-            if (!g) return hi(a.default, { Component: g, route: s });
+            if (!g)
+              return hi(a.default, {
+                Component: g,
+                route: s,
+              });
             const u = l.props[d],
               I = u
                 ? u === !0
@@ -5105,7 +5394,12 @@ var kt1 = Hg((_t1, q6) => {
                   ref: r,
                 })
               );
-            return hi(a.default, { Component: w, route: s }) || w;
+            return (
+              hi(a.default, {
+                Component: w,
+                route: s,
+              }) || w
+            );
           }
         );
       },
@@ -5153,7 +5447,12 @@ var kt1 = Hg((_t1, q6) => {
     function z(M, E) {
       if (((E = v1({}, E || r.value)), typeof M == "string")) {
         const v = l8(a, M, E.path),
-          H = t.resolve({ path: v.path }, E),
+          H = t.resolve(
+            {
+              path: v.path,
+            },
+            E
+          ),
           V = c.createHref(v.fullPath);
         return v1(v, H, {
           params: g(H.params),
@@ -5163,16 +5462,28 @@ var kt1 = Hg((_t1, q6) => {
         });
       }
       let _;
-      if ("path" in M) _ = v1({}, M, { path: l8(a, M.path, E.path).path });
+      if ("path" in M)
+        _ = v1({}, M, {
+          path: l8(a, M.path, E.path).path,
+        });
       else {
         const v = v1({}, M.params);
         for (const H in v) v[H] == null && delete v[H];
-        (_ = v1({}, M, { params: l(v) })), (E.params = l(E.params));
+        (_ = v1({}, M, {
+          params: l(v),
+        })),
+          (E.params = l(E.params));
       }
       const G = t.resolve(_, E),
         m1 = M.hash || "";
       G.params = d(g(G.params));
-      const h = sv(o, v1({}, M, { hash: Yv(m1), path: G.path })),
+      const h = sv(
+          o,
+          v1({}, M, {
+            hash: Yv(m1),
+            path: G.path,
+          })
+        ),
         m = c.createHref(h);
       return v1(
         {
@@ -5181,20 +5492,31 @@ var kt1 = Hg((_t1, q6) => {
           query: o === fi ? Qv(M.query) : M.query || {},
         },
         G,
-        { redirectedFrom: void 0, href: m }
+        {
+          redirectedFrom: void 0,
+          href: m,
+        }
       );
     }
     function p(M) {
       return typeof M == "string" ? l8(a, M, r.value.path) : v1({}, M);
     }
     function k(M, E) {
-      if (s !== M) return l4(8, { from: E, to: M });
+      if (s !== M)
+        return l4(8, {
+          from: E,
+          to: M,
+        });
     }
     function S(M) {
       return t1(M);
     }
     function q(M) {
-      return S(v1(p(M), { replace: !0 }));
+      return S(
+        v1(p(M), {
+          replace: !0,
+        })
+      );
     }
     function J(M) {
       const E = M.matched[M.matched.length - 1];
@@ -5204,7 +5526,11 @@ var kt1 = Hg((_t1, q6) => {
         return (
           typeof G == "string" &&
             ((G =
-              G.includes("?") || G.includes("#") ? (G = p(G)) : { path: G }),
+              G.includes("?") || G.includes("#")
+                ? (G = p(G))
+                : {
+                    path: G,
+                  }),
             (G.params = {})),
           v1(
             {
@@ -5239,18 +5565,28 @@ var kt1 = Hg((_t1, q6) => {
       return (
         !h &&
           dv(o, G, _) &&
-          ((V = l4(16, { to: H, from: G })), x2(G, G, !0, !1)),
+          ((V = l4(16, {
+            to: H,
+            from: G,
+          })),
+          x2(G, G, !0, !1)),
         (V ? Promise.resolve(V) : X(H, G))
           .catch((x) => (O2(x) ? (O2(x, 2) ? x : o3(x)) : g1(x, H, G)))
           .then((x) => {
             if (x) {
               if (O2(x, 2))
                 return t1(
-                  v1({ replace: m }, p(x.to), {
-                    state:
-                      typeof x.to == "object" ? v1({}, m1, x.to.state) : m1,
-                    force: h,
-                  }),
+                  v1(
+                    {
+                      replace: m,
+                    },
+                    p(x.to),
+                    {
+                      state:
+                        typeof x.to == "object" ? v1({}, m1, x.to.state) : m1,
+                      force: h,
+                    }
+                  ),
                   E || H
                 );
             } else x = R(H, G, !0, m, m1);
@@ -5328,7 +5664,15 @@ var kt1 = Hg((_t1, q6) => {
         v = Y3 ? history.state : {};
       _ &&
         (G || m
-          ? c.replace(M.fullPath, v1({ scroll: m && v && v.scroll }, m1))
+          ? c.replace(
+              M.fullPath,
+              v1(
+                {
+                  scroll: m && v && v.scroll,
+                },
+                m1
+              )
+            )
           : c.push(M.fullPath, m1)),
         (r.value = M),
         x2(M, E, _, m),
@@ -5342,7 +5686,12 @@ var kt1 = Hg((_t1, q6) => {
           const G = z(M),
             m1 = J(G);
           if (m1) {
-            t1(v1(m1, { replace: !0 }), G).catch(k4);
+            t1(
+              v1(m1, {
+                replace: !0,
+              }),
+              G
+            ).catch(k4);
             return;
           }
           s = G;
@@ -5499,20 +5848,25 @@ var kt1 = Hg((_t1, q6) => {
         return (t, a) => (
           k1(),
           W1("div", rz, [
-            M1(T3(ha), { class: "w-full relative h-screen overflow-hidden" }),
+            M1(T3(ha), {
+              class: "w-full relative h-screen overflow-hidden",
+            }),
           ])
         );
       },
     },
     A5 = cv({
       id: "general",
-      state: () => ({ showLoading: !1 }),
+      state: () => ({
+        showLoading: !1,
+      }),
       actions: {
         toggleLoading() {
           this.showLoading = !this.showLoading;
         },
       },
-    }); //! moment.js
+    });
+  //! moment.js
   //! version : 2.29.4
   //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
   //! license : MIT
@@ -5923,7 +6277,12 @@ Arguments: ` +
   function Nz(i) {
     var t = [],
       a;
-    for (a in i) l1(i, a) && t.push({ unit: a, priority: Ha[a] });
+    for (a in i)
+      l1(i, a) &&
+        t.push({
+          unit: a,
+          priority: Ha[a],
+        });
     return (
       t.sort(function (o, c) {
         return o.priority - c.priority;
@@ -6339,7 +6698,10 @@ Arguments: ` +
         : f > P4(i)
         ? ((r = i + 1), (s = f - P4(i)))
         : ((r = i), (s = f)),
-      { year: r, dayOfYear: s }
+      {
+        year: r,
+        dayOfYear: s,
+      }
     );
   }
   function Y4(i, t, a) {
@@ -6353,7 +6715,10 @@ Arguments: ` +
         : c > Y2(i.year(), t, a)
         ? ((n = c - Y2(i.year(), t, a)), (e = i.year() + 1))
         : ((e = i.year()), (n = c)),
-      { week: n, year: e }
+      {
+        week: n,
+        year: e,
+      }
     );
   }
   function Y2(i, t, a) {
@@ -6377,7 +6742,10 @@ Arguments: ` +
   function Kz(i) {
     return Y4(i, this._week.dow, this._week.doy).week;
   }
-  var Xz = { dow: 0, doy: 6 };
+  var Xz = {
+    dow: 0,
+    doy: 6,
+  };
   function Qz() {
     return this._week.dow;
   }
@@ -6835,7 +7203,10 @@ Arguments: ` +
         else
           return (
             C4[t.parentLocale] || (C4[t.parentLocale] = []),
-            C4[t.parentLocale].push({ name: i, config: t }),
+            C4[t.parentLocale].push({
+              name: i,
+              config: t,
+            }),
             null
           );
       return (
@@ -7264,7 +7635,9 @@ Arguments: ` +
     return (
       (i._locale = i._locale || i3(i._l)),
       t === null || (a === void 0 && t === "")
-        ? C0({ nullInput: !0 })
+        ? C0({
+            nullInput: !0,
+          })
         : (typeof t == "string" && (i._i = t = i._locale.preparse(t)),
           V2(t)
             ? new a6(U5(t))
@@ -7549,7 +7922,11 @@ Arguments: ` +
       e;
     return (
       R6(i)
-        ? (a = { ms: i._milliseconds, d: i._days, M: i._months })
+        ? (a = {
+            ms: i._milliseconds,
+            d: i._days,
+            M: i._months,
+          })
         : Z2(i) || !isNaN(+i)
         ? ((a = {}), t ? (a[t] = +i) : (a.milliseconds = +i))
         : (o = uI.exec(i))
@@ -7612,7 +7989,10 @@ Arguments: ` +
             (a.milliseconds = -a.milliseconds),
             (a.months = -a.months)),
         a)
-      : { milliseconds: 0, months: 0 };
+      : {
+          milliseconds: 0,
+          months: 0,
+        };
   }
   function qa(i, t) {
     return function (a, o) {
@@ -7896,7 +8276,12 @@ Arguments: ` +
   }
   function RI(i, t) {
     return this.isValid() && ((V2(i) && i.isValid()) || L1(i).isValid())
-      ? L2({ to: this, from: i }).locale(this.locale()).humanize(!t)
+      ? L2({
+          to: this,
+          from: i,
+        })
+          .locale(this.locale())
+          .humanize(!t)
       : this.localeData().invalidDate();
   }
   function BI(i) {
@@ -7904,7 +8289,12 @@ Arguments: ` +
   }
   function OI(i, t) {
     return this.isValid() && ((V2(i) && i.isValid()) || L1(i).isValid())
-      ? L2({ from: this, to: i }).locale(this.locale()).humanize(!t)
+      ? L2({
+          from: this,
+          to: i,
+        })
+          .locale(this.locale())
+          .humanize(!t)
       : this.localeData().invalidDate();
   }
   function EI(i) {
@@ -8814,7 +9204,15 @@ Arguments: ` +
     return f2(this.days() / 7);
   }
   var $2 = Math.round,
-    K3 = { ss: 44, s: 45, m: 45, h: 22, d: 26, w: null, M: 11 };
+    K3 = {
+      ss: 44,
+      s: 45,
+      m: 45,
+      h: 22,
+      d: 26,
+      w: null,
+      M: 11,
+    };
   function nM(i, t, a, o, c) {
     return c.relativeTime(t || 1, !!a, i, o);
   }
@@ -8964,7 +9362,8 @@ Arguments: ` +
   });
   H1("x", function (i, t, a) {
     a._d = new Date(o1(i));
-  }); //! moment.js
+  });
+  //! moment.js
   T.version = "2.29.4";
   dz(L1);
   T.fn = N;
@@ -9023,7 +9422,9 @@ Arguments: ` +
         },
       },
     },
-    hM = { class: "w-screen px-4 lg:px-8 relative pb-12 lg:pb-16 pt-2 bg" },
+    hM = {
+      class: "w-screen px-4 lg:px-8 relative pb-12 lg:pb-16 pt-2 bg",
+    },
     gM = C2(
       '<header class="hidden lg:flex justify-center items-center pt-10 pb-8"><div class="w-1/4 flex items-center justify-start"><img class="h-[100px]" src="' +
         Hi +
@@ -9032,35 +9433,55 @@ Arguments: ` +
         '" alt=""></div><div class="w-1/2 flex items-center justify-end"><article class="header__weather"><div class="header__weather-title">Late Edition</div><p class="header__weather-text"><strong>Today</strong>, clouds and breaks of sunshine, breezy in the afternoon, high 45. <strong>Tonight</strong>, clear, low 34. <strong>Tomorrow</strong>, plenty of sunshine, seasonable, high 44. </p></article></div></div><div class="w-full flex items-center justify-center"><div class="header__title">DAWG COIN</div></div></header>',
       2
     ),
-    mM = { class: "sub-header hidden lg:block" },
+    mM = {
+      class: "sub-header hidden lg:block",
+    },
     uM = C(
       "span",
-      { class: "sub-header__number" },
+      {
+        class: "sub-header__number",
+      },
       "VOL. LXIX . . . No. 69,420",
       -1
     ),
     vM = C(
       "span",
-      { class: "sub-header__copyright ml-4" },
+      {
+        class: "sub-header__copyright ml-4",
+      },
       "@ 2023 The DAWG coin company",
       -1
     ),
-    zM = { class: "sub-header__price" },
-    HM = { class: "sub-header flex lg:hidden justify-between" },
+    zM = {
+      class: "sub-header__price",
+    },
+    HM = {
+      class: "sub-header flex lg:hidden justify-between",
+    },
     IM = C(
       "span",
-      { class: "sub-header__number" },
+      {
+        class: "sub-header__number",
+      },
       "VOL. LXIX . . . No. 69,420",
       -1
     ),
-    pM = { class: "sub-header__price" },
-    MM = { class: "content" },
+    pM = {
+      class: "sub-header__price",
+    },
+    MM = {
+      class: "content",
+    },
     VM = C2(
       '<section class="left-column column"><article class="article lg:px-4"><div class="article__title">Who let the dawg&#39;s out?</div><div class="line line_type_short"></div><div class="article__subtitle"> DAWG Gang Pull Up On Shiba Holders </div><div class="line line_type_short"></div><span class="article__author">By Vitalik Buterin</span><div class="article__content"><p> In recent weeks, there has been an international surge in gang-related activities, leaving residents concerned and local law enforcement agencies on high alert. The incidents have prompted an urgent response from the authorities as they work to ensure the safety and security of the communities all over the world. </p><p class=""> The so called “DAWG” gang started as a crypto coin and surpassed the Shiba token within the first week of launch. Backlash from the Shiba community created tension and initiated the start of the lethal DAWG Gang. Reports of Dawg gang members taking Shiba holders for “walks” as if they were a dog and publicly humiliated have surfaced. When will this end? experts are examining the social and economic impacts of these gangs&#39; activities, particularly their use of cryptocurrency to potentially fund illicit actions, which adds a complex layer to an already tense situation. </p></div></article></section>',
       1
     ),
-    CM = { class: "center-column column" },
-    LM = { class: "main-photo flex flex-col items-center" },
+    CM = {
+      class: "center-column column",
+    },
+    LM = {
+      class: "main-photo flex flex-col items-center",
+    },
     xM = C(
       "video",
       {
@@ -9077,7 +9498,7 @@ Arguments: ` +
     bM = C2(
       '<div class="main-photo__title font-bronzier text-xl mb-1 lg:mb-0"> DAWG caught fucking your bitch </div><div class="main-photo__desc text-sm text-center"> DAWG was seen making off with your favorite toy, causing quite a stir in the neighborhood. </div><div class="flex items-center mt-2 lg:mt-1 gap-x-6 px-4 py-2 border-2 border-black rounded-xl bg-white"><a class="cursor-pointer" href=""><img class="w-10 h-10 z-10" src="' +
         co +
-        '" alt=""></a><a class="cursor-pointer" href="tglink"><img class="w-10 h-10 z-10" src="' +
+        '" alt=""></a><a class="cursor-pointer" href="https://t.me/dawg_eth"><img class="w-10 h-10 z-10" src="' +
         no +
         '" alt=""></a><a href="" class="relative"><img class="w-10 h-10 z-10" src="' +
         eo +
@@ -9116,7 +9537,12 @@ Arguments: ` +
             C("section", LM, [
               xM,
               bM,
-              C("div", NM, [SM, M1(e, { icon: "chevron-down" })]),
+              C("div", NM, [
+                SM,
+                M1(e, {
+                  icon: "chevron-down",
+                }),
+              ]),
             ]),
           ]),
           yM,
@@ -9135,10 +9561,25 @@ Arguments: ` +
         },
       },
     },
-    TM = { class: "w-[250px] flex flex-col font-bronzier" },
-    FM = { class: "flex justify-end" },
-    DM = C("img", { class: "w-2/5", src: AM, alt: "" }, null, -1),
-    RM = { class: "flex flex-col pt-1 ml-2" },
+    TM = {
+      class: "w-[250px] flex flex-col font-bronzier",
+    },
+    FM = {
+      class: "flex justify-end",
+    },
+    DM = C(
+      "img",
+      {
+        class: "w-2/5",
+        src: AM,
+        alt: "",
+      },
+      null,
+      -1
+    ),
+    RM = {
+      class: "flex flex-col pt-1 ml-2",
+    },
     BM = {
       class:
         "text-5xl text-black-outline tracking-wide text-[rgb(191,191,191)]",
@@ -9173,7 +9614,9 @@ Arguments: ` +
     WM = "/radar.png",
     UM = "/tokenomics.png",
     GM = {
-      components: { GTAHud: $M },
+      components: {
+        GTAHud: $M,
+      },
       data() {
         return {
           currentWeaponName: null,
@@ -9213,8 +9656,18 @@ Arguments: ` +
     ZM = n1(() =>
       C(
         "div",
-        { class: "w-full pb-6 lg:pb-6" },
-        [C("div", { class: "header__title" }, "Project Details")],
+        {
+          class: "w-full pb-6 lg:pb-6",
+        },
+        [
+          C(
+            "div",
+            {
+              class: "header__title",
+            },
+            "Project Details"
+          ),
+        ],
         -1
       )
     ),
@@ -9553,12 +10006,19 @@ Arguments: ` +
       )
     ),
     wV = [NV, SV, yV],
-    kV = { class: "w-full lg:w-1/2 flex h-full mt-4 lg:pl-8" },
-    AV = { key: 0, class: "flex flex-col" },
+    kV = {
+      class: "w-full lg:w-1/2 flex h-full mt-4 lg:pl-8",
+    },
+    AV = {
+      key: 0,
+      class: "flex flex-col",
+    },
     _V = n1(() =>
       C(
         "div",
-        { class: "font-bronzier text-4xl lg:text-5xl mb-2 lg:mb-0" },
+        {
+          class: "font-bronzier text-4xl lg:text-5xl mb-2 lg:mb-0",
+        },
         " Thugonomics ",
         -1
       )
@@ -9566,7 +10026,9 @@ Arguments: ` +
     PV = n1(() =>
       C(
         "div",
-        { class: "text-lg lg:text-xl mt-2 lg:mb-2 mb-1" },
+        {
+          class: "text-lg lg:text-xl mt-2 lg:mb-2 mb-1",
+        },
         " Total Supply: 696,696,696,696 DAWGs ",
         -1
       )
@@ -9574,20 +10036,36 @@ Arguments: ` +
     TV = n1(() =>
       C(
         "div",
-        { class: "text-lg lg:text-xl mb-2 lg:mb-8" },
+        {
+          class: "text-lg lg:text-xl mb-2 lg:mb-8",
+        },
         "Zero Taxes, 100% DAWG",
         -1
       )
     ),
     FV = n1(() =>
-      C("img", { class: "w-full h-auto", src: UM, alt: "" }, null, -1)
+      C(
+        "img",
+        {
+          class: "w-full h-auto",
+          src: UM,
+          alt: "",
+        },
+        null,
+        -1
+      )
     ),
     DV = [_V, PV, TV, FV],
-    RV = { key: 1, class: "flex flex-col" },
+    RV = {
+      key: 1,
+      class: "flex flex-col",
+    },
     BV = n1(() =>
       C(
         "div",
-        { class: "font-bronzier text-4xl lg:text-5xl mb-2 lg:mb-0" },
+        {
+          class: "font-bronzier text-4xl lg:text-5xl mb-2 lg:mb-0",
+        },
         " Pre Sale ",
         -1
       )
@@ -9595,7 +10073,9 @@ Arguments: ` +
     OV = n1(() =>
       C(
         "div",
-        { class: "text-lg lg:text-xl mb-2 lg:mb-0" },
+        {
+          class: "text-lg lg:text-xl mb-2 lg:mb-0",
+        },
         " DAWG coin will be listed on pinksale as a fair launch. ",
         -1
       )
@@ -9603,17 +10083,24 @@ Arguments: ` +
     EV = n1(() =>
       C(
         "ul",
-        { class: "bullet-list text-lg lg:text-xl mt-4" },
+        {
+          class: "bullet-list text-lg lg:text-xl mt-4",
+        },
         [C("li", null, "Details coming soon!")],
         -1
       )
     ),
     qV = [BV, OV, EV],
-    $V = { key: 2, class: "flex flex-col w-full" },
+    $V = {
+      key: 2,
+      class: "flex flex-col w-full",
+    },
     WV = n1(() =>
       C(
         "div",
-        { class: "font-bronzier text-4xl lg:text-5xl mb-2 lg:mb-0" },
+        {
+          class: "font-bronzier text-4xl lg:text-5xl mb-2 lg:mb-0",
+        },
         " Roadmap ",
         -1
       )
@@ -9621,7 +10108,9 @@ Arguments: ` +
     UV = n1(() =>
       C(
         "div",
-        { class: "text-lg lg:text-xl mb-2 lg:mb-0" },
+        {
+          class: "text-lg lg:text-xl mb-2 lg:mb-0",
+        },
         "Details coming soon!",
         -1
       )
@@ -9633,7 +10122,9 @@ Arguments: ` +
       k1(),
       W1("div", YM, [
         jM,
-        M1(e, { class: "absolute hidden lg:block top-16 right-20" }),
+        M1(e, {
+          class: "absolute hidden lg:block top-16 right-20",
+        }),
         ZM,
         C("div", KM, [
           C("div", XM, [
@@ -9660,7 +10151,9 @@ Arguments: ` +
               C(
                 "g",
                 {
-                  class: h2({ "active-weapon": n.isActiveWeapon("Fist") }),
+                  class: h2({
+                    "active-weapon": n.isActiveWeapon("Fist"),
+                  }),
                   "data-weapon": "Fist",
                   "data-image":
                     "https://vignette.wikia.nocookie.net/gtawiki/images/e/e0/Fist-GTAVPC-HUD.png/revision/latest?cb=20150425182638",
@@ -9693,7 +10186,9 @@ Arguments: ` +
                 "g",
                 {
                   "data-weapon": "Minigun",
-                  class: h2({ "active-weapon": n.isActiveWeapon("Minigun") }),
+                  class: h2({
+                    "active-weapon": n.isActiveWeapon("Minigun"),
+                  }),
                   "data-image":
                     "https://vignette.wikia.nocookie.net/gtawiki/images/2/27/Minigun-GTAVPC-HUD.png/revision/latest/scale-to-width-down/185?cb=20150419122509",
                   "data-damage": "90%",
@@ -9708,7 +10203,9 @@ Arguments: ` +
                 "g",
                 {
                   "data-weapon": "Jerry Can",
-                  class: h2({ "active-weapon": n.isActiveWeapon("Jerry Can") }),
+                  class: h2({
+                    "active-weapon": n.isActiveWeapon("Jerry Can"),
+                  }),
                   "data-image":
                     "https://vignette.wikia.nocookie.net/gtawiki/images/7/73/JerryCan-GTAVPC-HUD.png/revision/latest?cb=20150425183426",
                   "data-damage": "20%",
@@ -9724,7 +10221,9 @@ Arguments: ` +
                 {
                   class: h2([
                     "active",
-                    { "active-weapon": n.isActiveWeapon("Presale") },
+                    {
+                      "active-weapon": n.isActiveWeapon("Presale"),
+                    },
                   ]),
                   onClick: t[0] || (t[0] = (f) => n.changeCurrentWeaponWith(f)),
                   "data-weapon": "Presale",
@@ -9744,7 +10243,9 @@ Arguments: ` +
                   onClick: t[1] || (t[1] = (f) => n.changeCurrentWeaponWith(f)),
                   "data-weapon": "Tokenomics",
                   class: h2([
-                    { "active-weapon": n.isActiveWeapon("Tokenomics") },
+                    {
+                      "active-weapon": n.isActiveWeapon("Tokenomics"),
+                    },
                     "active",
                   ]),
                   "data-image":
@@ -9762,7 +10263,9 @@ Arguments: ` +
                 {
                   onClick: t[2] || (t[2] = (f) => n.changeCurrentWeaponWith(f)),
                   class: h2([
-                    { "active-weapon": n.isActiveWeapon("ROADMAP") },
+                    {
+                      "active-weapon": n.isActiveWeapon("ROADMAP"),
+                    },
                     "active",
                   ]),
                   "data-weapon": "ROADMAP",
@@ -9796,7 +10299,9 @@ Arguments: ` +
     ZV = "/hoodvideo2.mp4",
     KV = {
       data() {
-        return { width: window.innerWidth };
+        return {
+          width: window.innerWidth,
+        };
       },
       computed: {
         isMobile() {
@@ -9853,7 +10358,9 @@ Arguments: ` +
     XV = {
       class:
         "border-y-4 border-black overflow-hidden font-bronzier relative funkyContainer",
-      style: { "background-color": "rgb(9, 9, 9)" },
+      style: {
+        "background-color": "rgb(9, 9, 9)",
+      },
     },
     QV = C(
       "video",
@@ -9866,7 +10373,10 @@ Arguments: ` +
         id: "background-video",
       },
       [
-        C("source", { src: ZV, type: "video/mp4" }),
+        C("source", {
+          src: ZV,
+          type: "video/mp4",
+        }),
         Yt(" Your browser does not support the video tag. "),
       ],
       -1
@@ -9878,11 +10388,15 @@ Arguments: ` +
     iC = ["speed"],
     tC = C(
       "div",
-      { class: "scrolling-text" },
+      {
+        class: "scrolling-text",
+      },
       [
         C(
           "h2",
-          { class: "scrolling-text-content" },
+          {
+            class: "scrolling-text-content",
+          },
           " If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. "
         ),
       ],
@@ -9892,11 +10406,15 @@ Arguments: ` +
     oC = ["speed"],
     cC = C(
       "div",
-      { class: "scrolling-text" },
+      {
+        class: "scrolling-text",
+      },
       [
         C(
           "h2",
-          { class: "scrolling-text-content" },
+          {
+            class: "scrolling-text-content",
+          },
           " If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If it ain't hood, it ain't good. If ain't hood, it ain't good. If it ain't hood, it ain't good. "
         ),
       ],
@@ -9945,7 +10463,9 @@ Arguments: ` +
   }
   const rC = R2(KV, [["render", fC]]),
     sC = {},
-    dC = { class: "flex items-center justify-center flex-col mb-8" },
+    dC = {
+      class: "flex items-center justify-center flex-col mb-8",
+    },
     lC = C2(
       '<div class="flex items-center gap-x-6 mt-8 w-full justify-center 2"><a class="cursor-pointer" href=""><img class="w-10 h-10 z-10" src="' +
         co +
@@ -9968,7 +10488,12 @@ Arguments: ` +
     vC = "/dog.png",
     zC = {
       data() {
-        return { relativeMouse: { x: 0, y: 0 } };
+        return {
+          relativeMouse: {
+            x: 0,
+            y: 0,
+          },
+        };
       },
       methods: {
         clickShowHome() {
@@ -9989,17 +10514,29 @@ Arguments: ` +
           const i = document.getElementById("parallxWrapper");
           if (i) {
             const t = i.getBoundingClientRect();
-            return { left: t.left, top: t.top };
+            return {
+              left: t.left,
+              top: t.top,
+            };
           }
-          return { left: 0, top: 0 };
+          return {
+            left: 0,
+            top: 0,
+          };
         },
         wrapperCenter() {
           const i = document.getElementById("parallxWrapper");
           if (i) {
             const t = i.getBoundingClientRect();
-            return { x: t.left + t.width / 2, y: t.top + t.height / 2 };
+            return {
+              x: t.left + t.width / 2,
+              y: t.top + t.height / 2,
+            };
           }
-          return { x: 0, y: 0 };
+          return {
+            x: 0,
+            y: 0,
+          };
         },
         sensitivityMultiplier() {
           return 0.01;
@@ -10013,12 +10550,16 @@ Arguments: ` +
       },
     },
     H4 = (i) => (Lt("data-v-50dd0ac3"), (i = i()), xt(), i),
-    HC = { class: "lg:banner h-screen w-screen flex overflow-hidden bg-black" },
+    HC = {
+      class: "lg:banner h-screen w-screen flex overflow-hidden bg-black",
+    },
     IC = {
       class:
         "flex flex-col w-full lg:hidden items-center bg-black overflow-hidden",
     },
-    pC = { class: "w-[100%] h-full relative overflow-hidden" },
+    pC = {
+      class: "w-[100%] h-full relative overflow-hidden",
+    },
     MC = H4(() =>
       C(
         "img",
@@ -10034,7 +10575,11 @@ Arguments: ` +
     VC = H4(() =>
       C(
         "img",
-        { class: "absolute top-4 left-2 w-[325px]", src: ro, alt: "" },
+        {
+          class: "absolute top-4 left-2 w-[325px]",
+          src: ro,
+          alt: "",
+        },
         null,
         -1
       )
@@ -10051,10 +10596,40 @@ Arguments: ` +
         -1
       )
     ),
-    LC = { class: "hidden lg:block", id: "parallxWrapper" },
-    xC = H4(() => C("div", { class: "parallxLayerLogo" }, null, -1)),
-    bC = H4(() => C("div", { class: "parallxLayerRStar" }, null, -1)),
-    NC = H4(() => C("div", { class: "parallxLayerShooter" }, null, -1));
+    LC = {
+      class: "hidden lg:block",
+      id: "parallxWrapper",
+    },
+    xC = H4(() =>
+      C(
+        "div",
+        {
+          class: "parallxLayerLogo",
+        },
+        null,
+        -1
+      )
+    ),
+    bC = H4(() =>
+      C(
+        "div",
+        {
+          class: "parallxLayerRStar",
+        },
+        null,
+        -1
+      )
+    ),
+    NC = H4(() =>
+      C(
+        "div",
+        {
+          class: "parallxLayerShooter",
+        },
+        null,
+        -1
+      )
+    );
   function SC(i, t, a, o, c, n) {
     return (
       k1(),
@@ -10106,7 +10681,11 @@ Arguments: ` +
     wC = "/icons.png",
     kC = {
       data() {
-        return { loading: !0, message: "More Bones More bitches", progress: 0 };
+        return {
+          loading: !0,
+          message: "More Bones More bitches",
+          progress: 0,
+        };
       },
       mounted() {
         this.advanceLoading();
@@ -10114,9 +10693,21 @@ Arguments: ` +
       methods: {
         advanceLoading() {
           const i = [
-            { progress: 0, message: "More Bones More bitches", delay: 1e3 },
-            { progress: 33, message: "We want treats not jeets", delay: 2e3 },
-            { progress: 66, message: "Damn bitches and muts", delay: 1e3 },
+            {
+              progress: 0,
+              message: "More Bones More bitches",
+              delay: 1e3,
+            },
+            {
+              progress: 33,
+              message: "We want treats not jeets",
+              delay: 2e3,
+            },
+            {
+              progress: 66,
+              message: "Damn bitches and muts",
+              delay: 1e3,
+            },
           ];
           let t = 0;
           const a = () => {
@@ -10150,13 +10741,24 @@ Arguments: ` +
         "aria-hidden": "true",
       },
       [
-        C("div", { class: "loading-image-wrapper" }, [
-          C("img", { src: wC, alt: "Loading..." }),
-        ]),
+        C(
+          "div",
+          {
+            class: "loading-image-wrapper",
+          },
+          [
+            C("img", {
+              src: wC,
+              alt: "Loading...",
+            }),
+          ]
+        ),
       ],
       -1
     ),
-    TC = { class: "absolute bottom-[75px] text-3xl font-bronzier" };
+    TC = {
+      class: "absolute bottom-[75px] text-3xl font-bronzier",
+    };
   function FC(i, t, a, o, c, n) {
     return (
       k1(),
@@ -10178,34 +10780,65 @@ Arguments: ` +
           (a.style.width = `${o}px`),
           a.classList.add("cloned"),
           i.appendChild(a);
-        const n = new TimelineMax({ repeat: -1, paused: !0 }),
+        const n = new TimelineMax({
+            repeat: -1,
+            paused: !0,
+          }),
           e = 40;
         n
           .fromTo(
             t,
             e,
-            { rotation: 0.01, x: 0 },
-            { force3D: !0, x: -o, ease: Linear.easeNone },
+            {
+              rotation: 0.01,
+              x: 0,
+            },
+            {
+              force3D: !0,
+              x: -o,
+              ease: Linear.easeNone,
+            },
             0
           )
           .fromTo(
             a,
             e,
-            { rotation: 0.01, x: o },
-            { force3D: !0, x: 0, ease: Linear.easeNone },
+            {
+              rotation: 0.01,
+              x: o,
+            },
+            {
+              force3D: !0,
+              x: 0,
+              ease: Linear.easeNone,
+            },
             0
           )
-          .set(t, { force3D: !0, rotation: 0.01, x: o })
+          .set(t, {
+            force3D: !0,
+            rotation: 0.01,
+            x: o,
+          })
           .to(
             a,
             e,
-            { force3D: !0, rotation: 0.01, x: -o, ease: Linear.easeNone },
+            {
+              force3D: !0,
+              rotation: 0.01,
+              x: -o,
+              ease: Linear.easeNone,
+            },
             e
           )
           .to(
             t,
             e,
-            { force3D: !0, rotation: 0.01, x: 0, ease: Linear.easeNone },
+            {
+              force3D: !0,
+              rotation: 0.01,
+              x: 0,
+              ease: Linear.easeNone,
+            },
             e
           )
           .progress(1)
@@ -10223,7 +10856,10 @@ Arguments: ` +
       class: "tickerwrapper absolute top-0 font-bronzier z-10",
       ref: "tickerwrapper",
     },
-    OC = { class: "list", ref: "list" },
+    OC = {
+      class: "list",
+      ref: "list",
+    },
     EC = C2(
       '<li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li><li class="listitem"><span>Pinksale Live Soon!</span></li>',
       16
@@ -10242,7 +10878,9 @@ Arguments: ` +
           }
         },
       },
-      computed: { ...y5(A5) },
+      computed: {
+        ...y5(A5),
+      },
       data() {
         return {
           showPlayButton: !0,
@@ -10332,7 +10970,10 @@ Arguments: ` +
                   ? this.insTime.text("--:--")
                   : this.insTime.text(this.ctMinutes + ":" + this.ctSeconds),
                 this.insTime
-                  .css({ left: this.seekT, "margin-left": "-21px" })
+                  .css({
+                    left: this.seekT,
+                    "margin-left": "-21px",
+                  })
                   .fadeIn(0)));
         },
         async updateCurrTime() {
@@ -10439,14 +11080,19 @@ Arguments: ` +
             this.albumArt.find("img.active").removeClass("active"),
             $("#" + o).addClass("active");
           let c = $("#" + o).attr("src");
-          this.bgArtwork.css({ "background-image": "url(" + c + ")" }),
+          this.bgArtwork.css({
+            "background-image": "url(" + c + ")",
+          }),
             this.audio.play();
         },
         async hideHover() {
           this.sHover.width(0),
             this.insTime
               .text("00:00")
-              .css({ left: "0px", "margin-left": "0px" })
+              .css({
+                left: "0px",
+                "margin-left": "0px",
+              })
               .fadeOut(0);
         },
       },
@@ -10469,30 +11115,56 @@ Arguments: ` +
           this.initPlayer();
       },
     },
-    GC = { id: "app-cover" },
-    YC = { id: "player" },
+    GC = {
+      id: "app-cover",
+    },
+    YC = {
+      id: "player",
+    },
     jC = C2(
       '<div id="player-track"><div id="album-name"></div><div id="track-name"></div><div id="track-time"><div id="current-time"></div><div id="track-length"></div></div><div id="s-area"><div id="ins-time"></div><div id="s-hover"></div><div id="seek-bar"></div></div></div>',
       1
     ),
-    ZC = { id: "player-content" },
+    ZC = {
+      id: "player-content",
+    },
     KC = C2(
       '<div id="album-art"><img src="https://m.media-amazon.com/images/I/51NffnEjkwL._UXNaN_FMjpg_QL85_.jpg" class="active" id="_1"><img src="https://cdns-images.dzcdn.net/images/cover/ee99052bd41093d4339cb3ed7e1f84de/500x500.jpg" id="_2"><img src="https://live.staticflickr.com/2783/4036639666_a8248a5fa4_n.jpg" id="_3"><img src="https://upload.wikimedia.org/wikipedia/en/9/9d/Get_Rich_Or_Die_Tryin%27.JPG" id="_4"><img src="https://upload.wikimedia.org/wikipedia/en/2/23/NOREFAV.jpg" id="_5"><div id="buffer-box">Buffering ...</div></div>',
       1
     ),
-    XC = { id: "player-controls", class: "text-base lg:text-lg" },
+    XC = {
+      id: "player-controls",
+      class: "text-base lg:text-lg",
+    },
     QC = C(
       "div",
-      { class: "w-full text-center pt-3 mb-1 font-bronzier text-3xl" },
+      {
+        class: "w-full text-center pt-3 mb-1 font-bronzier text-3xl",
+      },
       " DAWG FM ",
       -1
     ),
-    JC = { class: "control" },
-    iL = { class: "button", id: "play-previous" },
-    tL = { class: "control" },
-    aL = { class: "button", id: "play-pause-button" },
-    oL = { class: "control" },
-    cL = { class: "button", id: "play-next" };
+    JC = {
+      class: "control",
+    },
+    iL = {
+      class: "button",
+      id: "play-previous",
+    },
+    tL = {
+      class: "control",
+    },
+    aL = {
+      class: "button",
+      id: "play-pause-button",
+    },
+    oL = {
+      class: "control",
+    },
+    cL = {
+      class: "button",
+      id: "play-next",
+    };
   function nL(i, t, a, o, c, n) {
     const e = g2("font-awesome-icon");
     return (
@@ -10505,16 +11177,34 @@ Arguments: ` +
             C("div", XC, [
               QC,
               C("div", JC, [
-                C("div", iL, [M1(e, { icon: "fas fa-backward" })]),
+                C("div", iL, [
+                  M1(e, {
+                    icon: "fas fa-backward",
+                  }),
+                ]),
               ]),
               C("div", tL, [
                 C("div", aL, [
                   c.showPlayButton
-                    ? (k1(), $4(e, { key: 0, icon: "fas fa-play" }))
-                    : (k1(), $4(e, { key: 1, icon: "fas fa-pause" })),
+                    ? (k1(),
+                      $4(e, {
+                        key: 0,
+                        icon: "fas fa-play",
+                      }))
+                    : (k1(),
+                      $4(e, {
+                        key: 1,
+                        icon: "fas fa-pause",
+                      })),
                 ]),
               ]),
-              C("div", oL, [C("div", cL, [M1(e, { icon: "fas fa-forward" })])]),
+              C("div", oL, [
+                C("div", cL, [
+                  M1(e, {
+                    icon: "fas fa-forward",
+                  }),
+                ]),
+              ]),
             ]),
           ]),
         ]),
@@ -10542,7 +11232,9 @@ Arguments: ` +
           audioElementVisible: !0,
         };
       },
-      computed: { ...y5(A5) },
+      computed: {
+        ...y5(A5),
+      },
       watch: {
         "generalStore.showLoading": function (i) {
           i && this.startLoading();
@@ -10568,7 +11260,11 @@ Arguments: ` +
         "flex flex-col relative h-screen overflow-y-scroll overflow-x-hidden",
       id: "mainContainer",
     },
-    sL = { key: 1, id: "home", class: "" };
+    sL = {
+      key: 1,
+      id: "home",
+      class: "",
+    };
   function dL(i, t, a, o, c, n) {
     const e = g2("loading-component"),
       f = g2("Question"),
@@ -10583,16 +11279,27 @@ Arguments: ` +
       W1("div", rL, [
         M1(
           S5,
-          { name: "fade" },
+          {
+            name: "fade",
+          },
           {
             default: bt(() => [
-              c.isLoading ? (k1(), $4(e, { key: 0 })) : o4("", !0),
+              c.isLoading
+                ? (k1(),
+                  $4(e, {
+                    key: 0,
+                  }))
+                : o4("", !0),
             ]),
             _: 1,
           }
         ),
         c.showQuestion
-          ? (k1(), $4(f, { key: 0, class: "z-[200]" }))
+          ? (k1(),
+            $4(f, {
+              key: 0,
+              class: "z-[200]",
+            }))
           : o4("", !0),
         c.showHome
           ? (k1(), W1("div", sL, [M1(r), M1(s), M1(d), M1(l), M1(g)]))
@@ -10607,7 +11314,13 @@ Arguments: ` +
   const lL = R2(fL, [["render", dL]]),
     hL = ez({
       history: Cv("/"),
-      routes: [{ path: "/", name: "home", component: lL }],
+      routes: [
+        {
+          path: "/",
+          name: "home",
+          component: lL,
+        },
+      ],
     });
   function pi(i, t) {
     var a = Object.keys(i);
@@ -10672,7 +11385,9 @@ Arguments: ` +
     return (
       t && Mi(i.prototype, t),
       a && Mi(i, a),
-      Object.defineProperty(i, "prototype", { writable: !1 }),
+      Object.defineProperty(i, "prototype", {
+        writable: !1,
+      }),
       i
     );
   }
@@ -10771,7 +11486,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     i7 = {},
     lo = {},
     ho = null,
-    go = { mark: Vi, measure: Vi };
+    go = {
+      mark: Vi,
+      measure: Vi,
+    };
   try {
     typeof window < "u" && (i7 = window),
       typeof document < "u" && (lo = document),
@@ -10867,7 +11585,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         brands: "fab",
         kit: "fak",
       }),
-      B1(x6, y1, { solid: "fass", regular: "fasr", light: "fasl" }),
+      B1(x6, y1, {
+        solid: "fass",
+        regular: "fasr",
+        light: "fasl",
+      }),
       x6)
     ),
     X4 = e6(
@@ -10881,7 +11603,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         fas: "fa-solid",
         fat: "fa-thin",
       }),
-      B1(b6, y1, { fass: "fa-solid", fasr: "fa-regular", fasl: "fa-light" }),
+      B1(b6, y1, {
+        fass: "fa-solid",
+        fasr: "fa-regular",
+        fasl: "fa-light",
+      }),
       b6)
     ),
     xL = e6(
@@ -10915,7 +11641,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         300: "fal",
         100: "fat",
       }),
-      B1(S6, y1, { 900: "fass", 400: "fasr", 300: "fasl" }),
+      B1(S6, y1, {
+        900: "fass",
+        400: "fasr",
+        300: "fasl",
+      }),
       S6)
     ),
     Io = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -11078,7 +11808,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     );
   }
   var r3 = Z8,
-    A2 = { size: 16, x: 0, y: 0, rotate: 0, flipX: !1, flipY: !1 };
+    A2 = {
+      size: 16,
+      x: 0,
+      y: 0,
+      rotate: 0,
+      flipX: !1,
+      flipY: !1,
+    };
   function FL(i) {
     if (!(!i || !a3)) {
       var t = C1.createElement("style");
@@ -11146,15 +11883,25 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     var t = i.transform,
       a = i.containerWidth,
       o = i.iconWidth,
-      c = { transform: "translate(".concat(a / 2, " 256)") },
+      c = {
+        transform: "translate(".concat(a / 2, " 256)"),
+      },
       n = "translate(".concat(t.x * 32, ", ").concat(t.y * 32, ") "),
       e = "scale("
         .concat((t.size / 16) * (t.flipX ? -1 : 1), ", ")
         .concat((t.size / 16) * (t.flipY ? -1 : 1), ") "),
       f = "rotate(".concat(t.rotate, " 0 0)"),
-      r = { transform: "".concat(n, " ").concat(e, " ").concat(f) },
-      s = { transform: "translate(".concat((o / 2) * -1, " -256)") };
-    return { outer: c, inner: r, path: s };
+      r = {
+        transform: "".concat(n, " ").concat(e, " ").concat(f),
+      },
+      s = {
+        transform: "translate(".concat((o / 2) * -1, " -256)"),
+      };
+    return {
+      outer: c,
+      inner: r,
+      path: s,
+    };
   }
   function OL(i) {
     var t = i.transform,
@@ -11962,7 +12709,12 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
   }
   var qL = {
       mixout: function () {
-        return { dom: { css: Vo, insertCss: z8 } };
+        return {
+          dom: {
+            css: Vo,
+            insertCss: z8,
+          },
+        };
       },
       hooks: function () {
         return {
@@ -12013,7 +12765,12 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
           .concat(t, ">");
   }
   function Si(i, t, a) {
-    if (i && i[t] && i[t][a]) return { prefix: t, iconName: a, icon: i[t][a] };
+    if (i && i[t] && i[t][a])
+      return {
+        prefix: t,
+        iconName: a,
+        icon: i[t][a],
+      };
   }
   var UL = function (t, a) {
       return function (o, c, n, e) {
@@ -12160,20 +12917,34 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
             r = n[2];
           return (
             f === "far" && !a && (f = "fas"),
-            typeof e == "string" && (c.names[e] = { prefix: f, iconName: r }),
+            typeof e == "string" &&
+              (c.names[e] = {
+                prefix: f,
+                iconName: r,
+              }),
             typeof e == "number" &&
-              (c.unicodes[e.toString(16)] = { prefix: f, iconName: r }),
+              (c.unicodes[e.toString(16)] = {
+                prefix: f,
+                iconName: r,
+              }),
             c
           );
         },
-        { names: {}, unicodes: {} }
+        {
+          names: {},
+          unicodes: {},
+        }
       );
     (bo = o.names),
       (No = o.unicodes),
-      (e7 = F0(U.styleDefault, { family: U.familyDefault }));
+      (e7 = F0(U.styleDefault, {
+        family: U.familyDefault,
+      }));
   };
   TL(function (i) {
-    e7 = F0(i.styleDefault, { family: U.familyDefault });
+    e7 = F0(i.styleDefault, {
+      family: U.familyDefault,
+    });
   });
   yo();
   function f7(i, t) {
@@ -12186,14 +12957,24 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     return (So[i] || {})[t];
   }
   function wo(i) {
-    return bo[i] || { prefix: null, iconName: null };
+    return (
+      bo[i] || {
+        prefix: null,
+        iconName: null,
+      }
+    );
   }
   function ix(i) {
     var t = No[i],
       a = f7("fas", i);
     return (
       t ||
-      (a ? { prefix: "fas", iconName: a } : null) || {
+      (a
+        ? {
+            prefix: "fas",
+            iconName: a,
+          }
+        : null) || {
         prefix: null,
         iconName: null,
       }
@@ -12203,7 +12984,11 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     return e7;
   }
   var r7 = function () {
-    return { prefix: null, iconName: null, rest: [] };
+    return {
+      prefix: null,
+      iconName: null,
+      rest: [],
+    };
   };
   function F0(i) {
     var t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {},
@@ -12247,7 +13032,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         (X3[d]
           ? ((d = ZL[f].includes(d) ? xL[f][d] : d), (e = d), (s.prefix = d))
           : KL[f].indexOf(d) > -1
-          ? ((e = d), (s.prefix = F0(d, { family: f })))
+          ? ((e = d),
+            (s.prefix = F0(d, {
+              family: f,
+            })))
           : l
           ? (s.iconName = l)
           : d !== U.replacementClass &&
@@ -12314,7 +13102,12 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
           {
             key: "_pullDefinitions",
             value: function (a, o) {
-              var c = o.prefix && o.iconName && o.icon ? { 0: o } : o;
+              var c =
+                o.prefix && o.iconName && o.icon
+                  ? {
+                      0: o,
+                    }
+                  : o;
               return (
                 Object.keys(c).map(function (n) {
                   var e = c[n],
@@ -12431,7 +13224,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         U.autoReplaceSvg === !1 && (U.autoReplaceSvg = !0),
           (U.observeMutations = !0),
           WL(function () {
-            fx({ autoReplaceSvgRoot: a }), B3("watch", t);
+            fx({
+              autoReplaceSvgRoot: a,
+            }),
+              B3("watch", t);
           });
       },
     },
@@ -12446,13 +13242,18 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         if (Array.isArray(t) && t.length === 2) {
           var a = t[1].indexOf("fa-") === 0 ? t[1].slice(3) : t[1],
             o = F0(t[0]);
-          return { prefix: o, iconName: _3(o, a) || a };
+          return {
+            prefix: o,
+            iconName: _3(o, a) || a,
+          };
         }
         if (
           typeof t == "string" &&
           (t.indexOf("".concat(U.cssPrefix, "-")) > -1 || t.match(bL))
         ) {
-          var c = D0(t.split(" "), { skipLookups: !0 });
+          var c = D0(t.split(" "), {
+            skipLookups: !0,
+          });
           return {
             prefix: c.prefix || M3(),
             iconName: _3(c.prefix, c.iconName) || c.iconName,
@@ -12460,7 +13261,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         }
         if (typeof t == "string") {
           var n = M3();
-          return { prefix: n, iconName: _3(n, t) || t };
+          return {
+            prefix: n,
+            iconName: _3(n, t) || t,
+          };
         }
       },
     },
@@ -12481,11 +13285,15 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
       (Object.keys(z2.styles).length > 0 || U.autoFetchSvg) &&
         a3 &&
         U.autoReplaceSvg &&
-        n2.dom.i2svg({ node: o });
+        n2.dom.i2svg({
+          node: o,
+        });
     };
   function R0(i, t) {
     return (
-      Object.defineProperty(i, "abstract", { get: t }),
+      Object.defineProperty(i, "abstract", {
+        get: t,
+      }),
       Object.defineProperty(i, "html", {
         get: function () {
           return i.abstract.map(function (o) {
@@ -12514,7 +13322,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     if (n7(e) && a.found && !o.found) {
       var f = a.width,
         r = a.height,
-        s = { x: f / r / 2, y: 0.5 };
+        s = {
+          x: f / r / 2,
+          y: 0.5,
+        };
       c.style = T0(
         B(
           B({}, n),
@@ -12527,7 +13338,13 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         )
       );
     }
-    return [{ tag: "svg", attributes: c, children: t }];
+    return [
+      {
+        tag: "svg",
+        attributes: c,
+        children: t,
+      },
+    ];
   }
   function sx(i) {
     var t = i.prefix,
@@ -12539,11 +13356,19 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     return [
       {
         tag: "svg",
-        attributes: { style: "display: none;" },
+        attributes: {
+          style: "display: none;",
+        },
         children: [
           {
             tag: "symbol",
-            attributes: B(B({}, c), {}, { id: e }),
+            attributes: B(
+              B({}, c),
+              {},
+              {
+                id: e,
+              }
+            ),
             children: o,
           },
         ],
@@ -12594,7 +13419,9 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
       },
       S =
         z && !~l.classes.indexOf("fa-fw")
-          ? { width: "".concat((L / w) * 16 * 0.0625, "em") }
+          ? {
+              width: "".concat((L / w) * 16 * 0.0625, "em"),
+            }
           : {};
     u && (k.attributes[R3] = ""),
       r &&
@@ -12622,8 +13449,14 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
       ),
       J =
         o.found && a.found
-          ? Q2("generateAbstractMask", q) || { children: [], attributes: {} }
-          : Q2("generateAbstractIcon", q) || { children: [], attributes: {} },
+          ? Q2("generateAbstractMask", q) || {
+              children: [],
+              attributes: {},
+            }
+          : Q2("generateAbstractIcon", q) || {
+              children: [],
+              attributes: {},
+            },
       t1 = J.children,
       P = J.attributes;
     return (q.children = t1), (q.attributes = P), f ? sx(q) : rx(q);
@@ -12638,9 +13471,18 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
       f = i.watchable,
       r = f === void 0 ? !1 : f,
       s = B(
-        B(B({}, e.attributes), n ? { title: n } : {}),
+        B(
+          B({}, e.attributes),
+          n
+            ? {
+                title: n,
+              }
+            : {}
+        ),
         {},
-        { class: e.classes.join(" ") }
+        {
+          class: e.classes.join(" "),
+        }
       );
     r && (s[R3] = "");
     var d = B({}, e.styles);
@@ -12656,11 +13498,17 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     l.length > 0 && (s.style = l);
     var g = [];
     return (
-      g.push({ tag: "span", attributes: s, children: [t] }),
+      g.push({
+        tag: "span",
+        attributes: s,
+        children: [t],
+      }),
       n &&
         g.push({
           tag: "span",
-          attributes: { class: "sr-only" },
+          attributes: {
+            class: "sr-only",
+          },
           children: [n],
         }),
       g
@@ -12671,19 +13519,34 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
       a = i.title,
       o = i.extra,
       c = B(
-        B(B({}, o.attributes), a ? { title: a } : {}),
+        B(
+          B({}, o.attributes),
+          a
+            ? {
+                title: a,
+              }
+            : {}
+        ),
         {},
-        { class: o.classes.join(" ") }
+        {
+          class: o.classes.join(" "),
+        }
       ),
       n = T0(o.styles);
     n.length > 0 && (c.style = n);
     var e = [];
     return (
-      e.push({ tag: "span", attributes: c, children: [t] }),
+      e.push({
+        tag: "span",
+        attributes: c,
+        children: [t],
+      }),
       a &&
         e.push({
           tag: "span",
-          attributes: { class: "sr-only" },
+          attributes: {
+            class: "sr-only",
+          },
           children: [a],
         }),
       e
@@ -12701,7 +13564,9 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
       Array.isArray(n)
         ? (e = {
             tag: "g",
-            attributes: { class: "".concat(U.cssPrefix, "-").concat(A3.GROUP) },
+            attributes: {
+              class: "".concat(U.cssPrefix, "-").concat(A3.GROUP),
+            },
             children: [
               {
                 tag: "path",
@@ -12721,11 +13586,26 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
               },
             ],
           })
-        : (e = { tag: "path", attributes: { fill: "currentColor", d: n } }),
-      { found: !0, width: t, height: a, icon: e }
+        : (e = {
+            tag: "path",
+            attributes: {
+              fill: "currentColor",
+              d: n,
+            },
+          }),
+      {
+        found: !0,
+        width: t,
+        height: a,
+        icon: e,
+      }
     );
   }
-  var lx = { found: !1, width: 512, height: 512 };
+  var lx = {
+    found: !1,
+    width: 512,
+    height: 512,
+  };
   function hx(i, t) {
     !zo &&
       !U.showMissingIcons &&
@@ -12769,7 +13649,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     o5 =
       U.measurePerformance && C6 && C6.mark && C6.measure
         ? C6
-        : { mark: _i, measure: _i },
+        : {
+            mark: _i,
+            measure: _i,
+          },
     N4 = 'FA "6.4.2"',
     gx = function (t) {
       return (
@@ -12787,7 +13670,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
           "".concat(N4, " ").concat(t, " ends")
         );
     },
-    d7 = { begin: gx, end: Ao },
+    d7 = {
+      begin: gx,
+      end: Ao,
+    },
     O6 = function () {};
   function Pi(i) {
     var t = i.getAttribute ? i.getAttribute(R3) : null;
@@ -12829,7 +13715,11 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     var n = i.children || [];
     return (
       n.forEach(function (e) {
-        c.appendChild(_o(e, { ceFn: o }));
+        c.appendChild(
+          _o(e, {
+            ceFn: o,
+          })
+        );
       }),
       c
     );
@@ -12867,7 +13757,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
               f
             );
           },
-          { toNode: [], toSvg: [] }
+          {
+            toNode: [],
+            toSvg: [],
+          }
         );
         (o[0].attributes.class = n.toSvg.join(" ")),
           n.toNode.length === 0
@@ -13015,16 +13908,26 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
       prefix: null,
       transform: A2,
       symbol: !1,
-      mask: { iconName: null, prefix: null, rest: [] },
+      mask: {
+        iconName: null,
+        prefix: null,
+        rest: [],
+      },
       maskId: null,
-      extra: { classes: [], styles: {}, attributes: {} },
+      extra: {
+        classes: [],
+        styles: {},
+        attributes: {},
+      },
     };
   }
   function Di(i) {
     var t =
         arguments.length > 1 && arguments[1] !== void 0
           ? arguments[1]
-          : { styleParser: !0 },
+          : {
+              styleParser: !0,
+            },
       a = Vx(i),
       o = a.iconName,
       c = a.prefix,
@@ -13039,17 +13942,30 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         titleId: i.getAttribute("data-fa-title-id"),
         prefix: c,
         transform: A2,
-        mask: { iconName: null, prefix: null, rest: [] },
+        mask: {
+          iconName: null,
+          prefix: null,
+          rest: [],
+        },
         maskId: null,
         symbol: !1,
-        extra: { classes: n, styles: r, attributes: e },
+        extra: {
+          classes: n,
+          styles: r,
+          attributes: e,
+        },
       },
       f
     );
   }
   var xx = z2.styles;
   function Fo(i) {
-    var t = U.autoReplaceSvg === "nest" ? Di(i, { styleParser: !1 }) : Di(i);
+    var t =
+      U.autoReplaceSvg === "nest"
+        ? Di(i, {
+            styleParser: !1,
+          })
+        : Di(i);
     return ~t.extra.classes.indexOf(Ho)
       ? Q2("generateLayersText", i, t)
       : Q2("generateSvgReplacementMutation", i, t);
@@ -13136,7 +14052,16 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         c = a.mask;
       return (
         c && (c = (c || {}).icon ? c : i5(c || {})),
-        i(o, B(B({}, a), {}, { mask: c }))
+        i(
+          o,
+          B(
+            B({}, a),
+            {},
+            {
+              mask: c,
+            }
+          )
+        )
       );
     };
   }
@@ -13165,38 +14090,60 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         var q = t.prefix,
           J = t.iconName,
           t1 = t.icon;
-        return R0(B({ type: "icon" }, t), function () {
-          return (
-            B3("beforeDOMElementCreation", { iconDefinition: t, params: a }),
-            U.autoA11y &&
-              (g
-                ? (p["aria-labelledby"] = ""
-                    .concat(U.replacementClass, "-title-")
-                    .concat(I || J4()))
-                : ((p["aria-hidden"] = "true"), (p.focusable = "false"))),
-            s7({
-              icons: {
-                main: t5(t1),
-                mask: r
-                  ? t5(r.icon)
-                  : { found: !1, width: null, height: null, icon: {} },
-              },
-              prefix: q,
-              iconName: J,
-              transform: B(B({}, A2), c),
-              symbol: e,
-              title: g,
-              maskId: d,
-              titleId: I,
-              extra: { attributes: p, styles: S, classes: w },
-            })
-          );
-        });
+        return R0(
+          B(
+            {
+              type: "icon",
+            },
+            t
+          ),
+          function () {
+            return (
+              B3("beforeDOMElementCreation", {
+                iconDefinition: t,
+                params: a,
+              }),
+              U.autoA11y &&
+                (g
+                  ? (p["aria-labelledby"] = ""
+                      .concat(U.replacementClass, "-title-")
+                      .concat(I || J4()))
+                  : ((p["aria-hidden"] = "true"), (p.focusable = "false"))),
+              s7({
+                icons: {
+                  main: t5(t1),
+                  mask: r
+                    ? t5(r.icon)
+                    : {
+                        found: !1,
+                        width: null,
+                        height: null,
+                        icon: {},
+                      },
+                },
+                prefix: q,
+                iconName: J,
+                transform: B(B({}, A2), c),
+                symbol: e,
+                title: g,
+                maskId: d,
+                titleId: I,
+                extra: {
+                  attributes: p,
+                  styles: S,
+                  classes: w,
+                },
+              })
+            );
+          }
+        );
       }
     },
     yx = {
       mixout: function () {
-        return { icon: Nx(Sx) };
+        return {
+          icon: Nx(Sx),
+        };
       },
       hooks: function () {
         return {
@@ -13242,7 +14189,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
                   u([
                     a,
                     s7({
-                      icons: { main: z, mask: p },
+                      icons: {
+                        main: z,
+                        mask: p,
+                      },
                       prefix: f,
                       iconName: c,
                       transform: r,
@@ -13276,7 +14226,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
                   iconWidth: n.width,
                 })),
               o.push(s || n.icon),
-              { children: o, attributes: c }
+              {
+                children: o,
+                attributes: c,
+              }
             );
           });
       },
@@ -13291,30 +14244,38 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
                   : {},
               c = o.classes,
               n = c === void 0 ? [] : c;
-            return R0({ type: "layer" }, function () {
-              B3("beforeDOMElementCreation", { assembler: a, params: o });
-              var e = [];
-              return (
-                a(function (f) {
-                  Array.isArray(f)
-                    ? f.map(function (r) {
-                        e = e.concat(r.abstract);
-                      })
-                    : (e = e.concat(f.abstract));
-                }),
-                [
-                  {
-                    tag: "span",
-                    attributes: {
-                      class: ["".concat(U.cssPrefix, "-layers")]
-                        .concat(n6(n))
-                        .join(" "),
+            return R0(
+              {
+                type: "layer",
+              },
+              function () {
+                B3("beforeDOMElementCreation", {
+                  assembler: a,
+                  params: o,
+                });
+                var e = [];
+                return (
+                  a(function (f) {
+                    Array.isArray(f)
+                      ? f.map(function (r) {
+                          e = e.concat(r.abstract);
+                        })
+                      : (e = e.concat(f.abstract));
+                  }),
+                  [
+                    {
+                      tag: "span",
+                      attributes: {
+                        class: ["".concat(U.cssPrefix, "-layers")]
+                          .concat(n6(n))
+                          .join(" "),
+                      },
+                      children: e,
                     },
-                    children: e,
-                  },
-                ]
-              );
-            });
+                  ]
+                );
+              }
+            );
           },
         };
       },
@@ -13335,22 +14296,31 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
               s = r === void 0 ? {} : r,
               d = o.styles,
               l = d === void 0 ? {} : d;
-            return R0({ type: "counter", content: a }, function () {
-              return (
-                B3("beforeDOMElementCreation", { content: a, params: o }),
-                dx({
-                  content: a.toString(),
-                  title: n,
-                  extra: {
-                    attributes: s,
-                    styles: l,
-                    classes: ["".concat(U.cssPrefix, "-layers-counter")].concat(
-                      n6(f)
-                    ),
-                  },
-                })
-              );
-            });
+            return R0(
+              {
+                type: "counter",
+                content: a,
+              },
+              function () {
+                return (
+                  B3("beforeDOMElementCreation", {
+                    content: a,
+                    params: o,
+                  }),
+                  dx({
+                    content: a.toString(),
+                    title: n,
+                    extra: {
+                      attributes: s,
+                      styles: l,
+                      classes: [
+                        "".concat(U.cssPrefix, "-layers-counter"),
+                      ].concat(n6(f)),
+                    },
+                  })
+                );
+              }
+            );
           },
         };
       },
@@ -13373,23 +14343,32 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
               l = d === void 0 ? {} : d,
               g = o.styles,
               u = g === void 0 ? {} : g;
-            return R0({ type: "text", content: a }, function () {
-              return (
-                B3("beforeDOMElementCreation", { content: a, params: o }),
-                Ai({
-                  content: a,
-                  transform: B(B({}, A2), n),
-                  title: f,
-                  extra: {
-                    attributes: l,
-                    styles: u,
-                    classes: ["".concat(U.cssPrefix, "-layers-text")].concat(
-                      n6(s)
-                    ),
-                  },
-                })
-              );
-            });
+            return R0(
+              {
+                type: "text",
+                content: a,
+              },
+              function () {
+                return (
+                  B3("beforeDOMElementCreation", {
+                    content: a,
+                    params: o,
+                  }),
+                  Ai({
+                    content: a,
+                    transform: B(B({}, A2), n),
+                    title: f,
+                    extra: {
+                      attributes: l,
+                      styles: u,
+                      classes: ["".concat(U.cssPrefix, "-layers-text")].concat(
+                        n6(s)
+                      ),
+                    },
+                  })
+                );
+              }
+            );
           },
         };
       },
@@ -13430,7 +14409,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
       a = YL(t, 0),
       o = a >= Bi[0] && a <= Bi[1],
       c = t.length === 2 ? t[0] === t[1] : !1;
-    return { value: X8(c ? t[0] : t), isSecondary: o || c };
+    return {
+      value: X8(c ? t[0] : t),
+      isSecondary: o || c,
+    };
   }
   function Oi(i, t) {
     var a = "".concat(VL).concat(t.replace(":", "-"));
@@ -13485,7 +14467,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
                       B({}, q),
                       {},
                       {
-                        icons: { main: t1, mask: r7() },
+                        icons: {
+                          main: t1,
+                          mask: r7(),
+                        },
                         prefix: u,
                         iconName: k,
                         extra: J,
@@ -13575,14 +14560,23 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
             qi
               ? c5()
               : Fi(
-                  J8("mutationObserverCallbacks", { observeMutationsRoot: o })
+                  J8("mutationObserverCallbacks", {
+                    observeMutationsRoot: o,
+                  })
                 );
           },
         };
       },
     },
     $i = function (t) {
-      var a = { size: 16, x: 0, y: 0, flipX: !1, flipY: !1, rotate: 0 };
+      var a = {
+        size: 16,
+        x: 0,
+        y: 0,
+        flipX: !1,
+        flipY: !1,
+        rotate: 0,
+      };
       return t
         .toLowerCase()
         .split(" ")
@@ -13643,15 +14637,25 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
             c = a.transform,
             n = a.containerWidth,
             e = a.iconWidth,
-            f = { transform: "translate(".concat(n / 2, " 256)") },
+            f = {
+              transform: "translate(".concat(n / 2, " 256)"),
+            },
             r = "translate(".concat(c.x * 32, ", ").concat(c.y * 32, ") "),
             s = "scale("
               .concat((c.size / 16) * (c.flipX ? -1 : 1), ", ")
               .concat((c.size / 16) * (c.flipY ? -1 : 1), ") "),
             d = "rotate(".concat(c.rotate, " 0 0)"),
-            l = { transform: "".concat(r, " ").concat(s, " ").concat(d) },
-            g = { transform: "translate(".concat((e / 2) * -1, " -256)") },
-            u = { outer: f, inner: l, path: g };
+            l = {
+              transform: "".concat(r, " ").concat(s, " ").concat(d),
+            },
+            g = {
+              transform: "translate(".concat((e / 2) * -1, " -256)"),
+            },
+            u = {
+              outer: f,
+              inner: l,
+              path: g,
+            };
           return {
             tag: "g",
             attributes: B({}, u.outer),
@@ -13672,7 +14676,12 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         };
       },
     },
-    p8 = { x: 0, y: 0, width: "100%", height: "100%" };
+    p8 = {
+      x: 0,
+      y: 0,
+      width: "100%",
+      height: "100%",
+    };
   function Wi(i) {
     var t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : !0;
     return (
@@ -13716,25 +14725,46 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
             d = n.icon,
             l = e.width,
             g = e.icon,
-            u = BL({ transform: r, containerWidth: l, iconWidth: s }),
+            u = BL({
+              transform: r,
+              containerWidth: l,
+              iconWidth: s,
+            }),
             I = {
               tag: "rect",
-              attributes: B(B({}, p8), {}, { fill: "white" }),
+              attributes: B(
+                B({}, p8),
+                {},
+                {
+                  fill: "white",
+                }
+              ),
             },
-            L = d.children ? { children: d.children.map(Wi) } : {},
+            L = d.children
+              ? {
+                  children: d.children.map(Wi),
+                }
+              : {},
             w = {
               tag: "g",
               attributes: B({}, u.inner),
               children: [
                 Wi(
                   B(
-                    { tag: d.tag, attributes: B(B({}, d.attributes), u.path) },
+                    {
+                      tag: d.tag,
+                      attributes: B(B({}, d.attributes), u.path),
+                    },
                     L
                   )
                 ),
               ],
             },
-            z = { tag: "g", attributes: B({}, u.outer), children: [w] },
+            z = {
+              tag: "g",
+              attributes: B({}, u.outer),
+              children: [w],
+            },
             p = "mask-".concat(f || J4()),
             k = "clip-".concat(f || J4()),
             S = {
@@ -13753,7 +14783,13 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
             q = {
               tag: "defs",
               children: [
-                { tag: "clipPath", attributes: { id: k }, children: Ox(g) },
+                {
+                  tag: "clipPath",
+                  attributes: {
+                    id: k,
+                  },
+                  children: Ox(g),
+                },
                 S,
               ],
             };
@@ -13769,7 +14805,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
                 p8
               ),
             }),
-            { children: o, attributes: c }
+            {
+              children: o,
+              attributes: c,
+            }
           );
         };
       },
@@ -13781,7 +14820,9 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
           (a = p3.matchMedia("(prefers-reduced-motion: reduce)").matches),
           (t.missingIconAbstract = function () {
             var o = [],
-              c = { fill: "currentColor" },
+              c = {
+                fill: "currentColor",
+              },
               n = {
                 attributeType: "XML",
                 repeatCount: "indefinite",
@@ -13797,10 +14838,24 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
                 }
               ),
             });
-            var e = B(B({}, n), {}, { attributeName: "opacity" }),
+            var e = B(
+                B({}, n),
+                {},
+                {
+                  attributeName: "opacity",
+                }
+              ),
               f = {
                 tag: "circle",
-                attributes: B(B({}, c), {}, { cx: "256", cy: "364", r: "28" }),
+                attributes: B(
+                  B({}, c),
+                  {},
+                  {
+                    cx: "256",
+                    cy: "364",
+                    r: "28",
+                  }
+                ),
                 children: [],
               };
             return (
@@ -13811,12 +14866,21 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
                     attributes: B(
                       B({}, n),
                       {},
-                      { attributeName: "r", values: "28;14;28;28;14;28;" }
+                      {
+                        attributeName: "r",
+                        values: "28;14;28;28;14;28;",
+                      }
                     ),
                   },
                   {
                     tag: "animate",
-                    attributes: B(B({}, e), {}, { values: "1;0;1;1;0;1;" }),
+                    attributes: B(
+                      B({}, e),
+                      {},
+                      {
+                        values: "1;0;1;1;0;1;",
+                      }
+                    ),
                   }
                 ),
               o.push(f),
@@ -13835,7 +14899,13 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
                   : [
                       {
                         tag: "animate",
-                        attributes: B(B({}, e), {}, { values: "1;0;0;0;0;1;" }),
+                        attributes: B(
+                          B({}, e),
+                          {},
+                          {
+                            values: "1;0;0;0;0;1;",
+                          }
+                        ),
                       },
                     ],
               }),
@@ -13853,11 +14923,23 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
                   children: [
                     {
                       tag: "animate",
-                      attributes: B(B({}, e), {}, { values: "0;0;1;1;0;0;" }),
+                      attributes: B(
+                        B({}, e),
+                        {},
+                        {
+                          values: "0;0;1;1;0;0;",
+                        }
+                      ),
                     },
                   ],
                 }),
-              { tag: "g", attributes: { class: "missing" }, children: o }
+              {
+                tag: "g",
+                attributes: {
+                  class: "missing",
+                },
+                children: o,
+              }
             );
           });
       },
@@ -13874,7 +14956,9 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
       },
     },
     Wx = [qL, yx, wx, kx, Ax, Dx, Rx, Bx, Ex, qx, $x];
-  ox(Wx, { mixoutsTo: n2 });
+  ox(Wx, {
+    mixoutsTo: n2,
+  });
   n2.noAuto;
   n2.config;
   var Ux = n2.library;
@@ -13980,7 +15064,9 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         : typeof self < "u"
         ? self
         : {},
-    Do = { exports: {} };
+    Do = {
+      exports: {},
+    };
   (function (i) {
     (function (t) {
       var a = function (z, p, k) {
@@ -14115,7 +15201,11 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
           }
           return r;
         },
-        { attrs: {}, class: {}, style: {} }
+        {
+          attrs: {},
+          class: {},
+          style: {},
+        }
       );
     a.class;
     var n = a.style,
@@ -14127,7 +15217,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         W2(
           W2({}, t),
           {},
-          { class: c.class, style: W2(W2({}, c.style), e) },
+          {
+            class: c.class,
+            style: W2(W2({}, c.style), e),
+          },
           c.attrs
         ),
         f
@@ -14191,14 +15284,27 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     if (i === null) return null;
     if (n0(i) === "object" && i.prefix && i.iconName) return i;
     if (Array.isArray(i) && i.length === 2)
-      return { prefix: i[0], iconName: i[1] };
-    if (typeof i == "string") return { prefix: "fas", iconName: i };
+      return {
+        prefix: i[0],
+        iconName: i[1],
+      };
+    if (typeof i == "string")
+      return {
+        prefix: "fas",
+        iconName: i,
+      };
   }
   var ab = V5({
       name: "FontAwesomeIcon",
       props: {
-        border: { type: Boolean, default: !1 },
-        fixedWidth: { type: Boolean, default: !1 },
+        border: {
+          type: Boolean,
+          default: !1,
+        },
+        fixedWidth: {
+          type: Boolean,
+          default: !1,
+        },
         flip: {
           type: [Boolean, String],
           default: !1,
@@ -14206,9 +15312,18 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
             return [!0, !1, "horizontal", "vertical", "both"].indexOf(t) > -1;
           },
         },
-        icon: { type: [Object, Array, String], required: !0 },
-        mask: { type: [Object, Array, String], default: null },
-        listItem: { type: Boolean, default: !1 },
+        icon: {
+          type: [Object, Array, String],
+          required: !0,
+        },
+        mask: {
+          type: [Object, Array, String],
+          default: null,
+        },
+        listItem: {
+          type: Boolean,
+          default: !1,
+        },
         pull: {
           type: String,
           default: null,
@@ -14216,7 +15331,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
             return ["right", "left"].indexOf(t) > -1;
           },
         },
-        pulse: { type: Boolean, default: !1 },
+        pulse: {
+          type: Boolean,
+          default: !1,
+        },
         rotation: {
           type: [String, Number],
           default: null,
@@ -14224,7 +15342,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
             return [90, 180, 270].indexOf(Number.parseInt(t, 10)) > -1;
           },
         },
-        swapOpacity: { type: Boolean, default: !1 },
+        swapOpacity: {
+          type: Boolean,
+          default: !1,
+        },
         size: {
           type: String,
           default: null,
@@ -14251,19 +15372,58 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
             );
           },
         },
-        spin: { type: Boolean, default: !1 },
-        transform: { type: [String, Object], default: null },
-        symbol: { type: [Boolean, String], default: !1 },
-        title: { type: String, default: null },
-        inverse: { type: Boolean, default: !1 },
-        bounce: { type: Boolean, default: !1 },
-        shake: { type: Boolean, default: !1 },
-        beat: { type: Boolean, default: !1 },
-        fade: { type: Boolean, default: !1 },
-        beatFade: { type: Boolean, default: !1 },
-        flash: { type: Boolean, default: !1 },
-        spinPulse: { type: Boolean, default: !1 },
-        spinReverse: { type: Boolean, default: !1 },
+        spin: {
+          type: Boolean,
+          default: !1,
+        },
+        transform: {
+          type: [String, Object],
+          default: null,
+        },
+        symbol: {
+          type: [Boolean, String],
+          default: !1,
+        },
+        title: {
+          type: String,
+          default: null,
+        },
+        inverse: {
+          type: Boolean,
+          default: !1,
+        },
+        bounce: {
+          type: Boolean,
+          default: !1,
+        },
+        shake: {
+          type: Boolean,
+          default: !1,
+        },
+        beat: {
+          type: Boolean,
+          default: !1,
+        },
+        fade: {
+          type: Boolean,
+          default: !1,
+        },
+        beatFade: {
+          type: Boolean,
+          default: !1,
+        },
+        flash: {
+          type: Boolean,
+          default: !1,
+        },
+        spinPulse: {
+          type: Boolean,
+          default: !1,
+        },
+        spinReverse: {
+          type: Boolean,
+          default: !1,
+        },
       },
       setup: function (t, a) {
         var o = a.attrs,
@@ -14290,7 +15450,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
               W2(
                 W2(W2(W2({}, n.value), e.value), f.value),
                 {},
-                { symbol: t.symbol, title: t.title }
+                {
+                  symbol: t.symbol,
+                  title: t.title,
+                }
               )
             );
           });
@@ -14300,7 +15463,9 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
             if (!d)
               return ib("Could not find one or more icon(s)", c.value, f.value);
           },
-          { immediate: !0 }
+          {
+            immediate: !0,
+          }
         );
         var s = E1(function () {
           return r.value ? Ro(r.value.abstract[0], {}, o) : null;
@@ -40049,7 +41214,9 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
       ? i.default
       : i;
   }
-  var zg = { exports: {} };
+  var zg = {
+    exports: {},
+  };
   (function (i, t) {
     (function (a, o) {
       i.exports = o();
@@ -40058,7 +41225,11 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         var o = {};
         function c(n) {
           if (o[n]) return o[n].exports;
-          var e = (o[n] = { i: n, l: !1, exports: {} });
+          var e = (o[n] = {
+            i: n,
+            l: !1,
+            exports: {},
+          });
           return a[n].call(e.exports, e, e.exports, c), (e.l = !0), e.exports;
         }
         return (
@@ -40066,13 +41237,20 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
           (c.c = o),
           (c.d = function (n, e, f) {
             c.o(n, e) ||
-              Object.defineProperty(n, e, { enumerable: !0, get: f });
+              Object.defineProperty(n, e, {
+                enumerable: !0,
+                get: f,
+              });
           }),
           (c.r = function (n) {
             typeof Symbol < "u" &&
               Symbol.toStringTag &&
-              Object.defineProperty(n, Symbol.toStringTag, { value: "Module" }),
-              Object.defineProperty(n, "__esModule", { value: !0 });
+              Object.defineProperty(n, Symbol.toStringTag, {
+                value: "Module",
+              }),
+              Object.defineProperty(n, "__esModule", {
+                value: !0,
+              });
           }),
           (c.t = function (n, e) {
             if (
@@ -40083,7 +41261,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
             var f = Object.create(null);
             if (
               (c.r(f),
-              Object.defineProperty(f, "default", { enumerable: !0, value: n }),
+              Object.defineProperty(f, "default", {
+                enumerable: !0,
+                value: n,
+              }),
               2 & e && typeof n != "string")
             )
               for (var r in n)
@@ -40221,10 +41402,18 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
                         P.preventDefault();
                         var D = w ? q.data.attrs.href : q.props.href,
                           X = document.getElementById(D.substring(1));
-                        X && l(Object.assign(J, { scrollTo: X, hash: D }));
+                        X &&
+                          l(
+                            Object.assign(J, {
+                              scrollTo: X,
+                              hash: D,
+                            })
+                          );
                       };
                       k.addEventListener("click", t1),
-                        (k[d] = { clickHandler: t1 });
+                        (k[d] = {
+                          clickHandler: t1,
+                        });
                     }
                   }),
                   n(L, w ? "unbind" : "unmounted", function (k) {
