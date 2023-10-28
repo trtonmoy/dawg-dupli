@@ -9104,7 +9104,7 @@ Arguments: ` +
         C("section", mM, [
           uM,
           vM,
-          C("span", zM, "Los Angeles, " + W6(n.currentDate) + "    $2.69", 1),
+          C("span", zM, "Los Angeles, " + W6(n.currentDate) + "    $2.69", 1),
         ]),
         C("section", HM, [
           IM,
@@ -9588,7 +9588,7 @@ Arguments: ` +
       C(
         "div",
         { class: "font-bronzier text-4xl lg:text-5xl mb-2 lg:mb-0" },
-        " $DAWG ",
+        " Public Sale ",
         -1
       )
     ),
@@ -9596,7 +9596,7 @@ Arguments: ` +
       C(
         "div",
         { class: "text-lg lg:text-xl mb-2 lg:mb-0" },
-        " DAWG coin will be listed on Uniswap. ",
+        " $DAWG coin will be publicly listed on Uniswap as a stealth launch!. ",
         -1
       )
     ),
@@ -9724,10 +9724,10 @@ Arguments: ` +
                 {
                   class: h2([
                     "active",
-                    { "active-weapon": n.isActiveWeapon("Presale") },
+                    { "active-weapon": n.isActiveWeapon("Pool") },
                   ]),
                   onClick: t[0] || (t[0] = (f) => n.changeCurrentWeaponWith(f)),
-                  "data-weapon": "Presale",
+                  "data-weapon": "Pool",
                   "data-image":
                     "https://vignette.wikia.nocookie.net/gtawiki/images/8/8f/Pistol-GTAVPC-HUD.png/revision/latest?cb=20150419121059",
                   "data-damage": "30%",
@@ -9783,7 +9783,7 @@ Arguments: ` +
           c.activeWeapon == "Tokenomics"
             ? (k1(), W1("div", AV, DV))
             : o4("", !0),
-          c.activeWeapon == "Presale" ? (k1(), W1("div", RV, qV)) : o4("", !0),
+          c.activeWeapon == "Pool" ? (k1(), W1("div", RV, qV)) : o4("", !0),
           c.activeWeapon == "ROADMAP" ? (k1(), W1("div", $V, GV)) : o4("", !0),
         ]),
       ])
