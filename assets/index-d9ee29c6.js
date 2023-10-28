@@ -9575,7 +9575,7 @@ Arguments: ` +
       C(
         "div",
         { class: "text-lg lg:text-xl mb-2 lg:mb-8" },
-        "Zero Taxes, 100% DAWG",
+        "Tax : 1/1, DAWG",
         -1
       )
     ),
