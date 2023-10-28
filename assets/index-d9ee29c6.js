@@ -9955,7 +9955,7 @@ Arguments: ` +
         fo +
         '" alt=""></a><a href="buylink" class="relative"><img class="w-10 h-10 z-10" src="' +
         eo +
-        '" alt=""></a></div><a href="/" class="mt-4 text-xl font-bold">dawgcoin.xyz</a>',
+        '" alt=""></a></div>',
       2
     ),
     hC = [lC];
