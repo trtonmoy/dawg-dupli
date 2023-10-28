@@ -9468,7 +9468,7 @@ Arguments: ` +
           class: "tracking-wide text-[20px] lg:text-[18px]",
           fill: "white",
         },
-        " Pre Sale ",
+        " $DAWG ",
         -1
       )
     ),
@@ -9588,7 +9588,7 @@ Arguments: ` +
       C(
         "div",
         { class: "font-bronzier text-4xl lg:text-5xl mb-2 lg:mb-0" },
-        " Pre Sale ",
+        " $DAWG ",
         -1
       )
     ),
@@ -9596,7 +9596,7 @@ Arguments: ` +
       C(
         "div",
         { class: "text-lg lg:text-xl mb-2 lg:mb-0" },
-        " DAWG coin will be listed on pinksale as a fair launch. ",
+        " DAWG coin will be listed on Uniswap. ",
         -1
       )
     ),
