@@ -9077,7 +9077,7 @@ Arguments: ` +
     bM = C2(
       '<div class="main-photo__title font-bronzier text-xl mb-1 lg:mb-0"> DAWG caught fucking your bitch </div><div class="main-photo__desc text-sm text-center"> DAWG was seen making off with your favorite toy, causing quite a stir in the neighborhood. </div><div class="flex items-center mt-2 lg:mt-1 gap-x-6 px-4 py-2 border-2 border-black rounded-xl bg-white"><a class="cursor-pointer" href="https://twitter.com/Dawgerc"><img class="w-10 h-10 z-10" src="' +
         co +
-        '" alt=""></a><a class="cursor-pointer" href="https://t.me/dawgerc"><img class="w-10 h-10 z-10" src="' +
+        '" alt=""></a><a class="cursor-pointer" href="https://t.me/dawgeth"><img class="w-10 h-10 z-10" src="' +
         no +
         '" alt=""></a><a href="buylink" class="relative"><img class="w-10 h-10 z-10" src="' +
         eo +
@@ -9575,7 +9575,7 @@ Arguments: ` +
       C(
         "div",
         { class: "text-lg lg:text-xl mb-2 lg:mb-8" },
-        "Tax : 1/1, DAWG",
+        "Tax : 0/0, DAWG",
         -1
       )
     ),
@@ -9949,7 +9949,7 @@ Arguments: ` +
     lC = C2(
       '<div class="flex items-center gap-x-6 mt-8 w-full justify-center 2"><a class="cursor-pointer" href="https://twitter.com/Dawgerc"><img class="w-10 h-10 z-10" src="' +
         co +
-        '" alt=""></a><a class="cursor-pointer" href="https://t.me/dawgerc"><img class="w-10 h-10 z-10" src="' +
+        '" alt=""></a><a class="cursor-pointer" href="https://t.me/dawgeth"><img class="w-10 h-10 z-10" src="' +
         no +
         '" alt=""></a><a href="chartlink" class="relative"><img class="w-10 h-10 z-10" src="' +
         fo +
