@@ -9056,7 +9056,7 @@ Arguments: ` +
     pM = { class: "sub-header__price" },
     MM = { class: "content" },
     VM = C2(
-      '<section class="left-column column"><article class="article lg:px-4"><div class="article__title">Who let the dawg&#39;s out?</div><div class="line line_type_short"></div><div class="article__subtitle"> DAWG Gang Pull Up On Shiba Holders </div><div class="line line_type_short"></div><span class="article__author">By Vitalik Buterin</span><div class="article__content"><p> In recent weeks, there has been an international surge in gang-related activities, leaving residents concerned and local law enforcement agencies on high alert. The incidents have prompted an urgent response from the authorities as they work to ensure the safety and security of the communities all over the world. </p><p class=""> The so called “DAWG” gang started as a crypto coin and surpassed the Shiba token within the first week of launch. Backlash from the Shiba community created tension and initiated the start of the lethal DAWG Gang. Reports of Dawg gang members taking Shiba holders for “walks” as if they were a dog and publicly humiliated have surfaced. When will this end? experts are examining the social and economic impacts of these gangs&#39; activities, particularly their use of cryptocurrency to potentially fund illicit actions, which adds a complex layer to an already tense situation. </p></div></article></section>',
+      '<section class="left-column column"><article class="article lg:px-4"><div class="article__title">Lets know the dawg&#39;s out?</div><div class="line line_type_short"></div><div class="article__subtitle"> DAWG Gang Pull Up On Shiba Holders </div><div class="line line_type_short"></div><span class="article__author">By Vitalik Buterin</span><div class="article__content"><p> In recent weeks, there has been an international surge in gang-related activities, leaving residents concerned and local law enforcement agencies on high alert. The incidents have prompted an urgent response from the authorities as they work to ensure the safety and security of the communities all over the world. </p><p class=""> The so called “DAWG” gang started as a crypto coin and surpassed the Shiba token within the first week of launch. Backlash from the Shiba community created tension and initiated the start of the lethal DAWG Gang. Reports of Dawg gang members taking Shiba holders for “walks” as if they were a dog and publicly humiliated have surfaced. When will this end? experts are examining the social and economic impacts of these gangs&#39; activities, particularly their use of cryptocurrency to potentially fund illicit actions, which adds a complex layer to an already tense situation. </p></div></article></section>',
       1
     ),
     CM = { class: "center-column column" },
@@ -9148,7 +9148,7 @@ Arguments: ` +
       3
     ),
     EM = C2(
-      '<div class="text-5xl tracking-wider text-end text-black-outline-light text-green-700"> $0042069 </div><div class="flex justify-end"><img class="h-8" src="' +
+      '<div class="text-5xl tracking-wider text-end text-black-outline-light text-green-700"> $DAWG </div><div class="flex justify-end"><img class="h-8" src="' +
         Ii +
         '" alt=""><img class="h-8 blinking-star" src="' +
         _M +
@@ -9575,7 +9575,7 @@ Arguments: ` +
       C(
         "div",
         { class: "text-lg lg:text-xl mb-2 lg:mb-8" },
-        "Tax : 0/0, DAWG",
+        "Tax : 1/1, DAWG",
         -1
       )
     ),
