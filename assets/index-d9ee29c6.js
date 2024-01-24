@@ -9009,8 +9009,8 @@ Arguments: ` +
     dM = "/dawg.mp4",
     co = "/twitter.png",
     no = "/telegram.png",
-    eo = "/uniswap.png",
-    fo = "/dextools.png",
+    eo = "/solscan.png",
+    fo = "/dex.png",
     R2 = (i, t) => {
       const a = i.__vccOpts || i;
       for (const [o, c] of t) a[o] = c;
@@ -9567,7 +9567,7 @@ Arguments: ` +
       C(
         "div",
         { class: "text-lg lg:text-xl mt-2 lg:mb-2 mb-1" },
-        " Total Supply: 696,696,696,696 DAWGs ",
+        " Total Supply: 1,000,000,000 DAWGs ",
         -1
       )
     ),
